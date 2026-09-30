@@ -1,0 +1,88 @@
+{
+  "_help": "Item kits: one click (or a shortcut) puts everything in your backpack. qty = amount (one stack: resources 500, light darts 1000, healkits 20). backpack_min raises your backpack slots to at least this number (never lowers it). Item ids are shown in small text on DuneShark's item cards.",
+  "kits": {
+    "build": {
+      "name": "Build Ready Kit",
+      "backpack_min": 100,
+      "items": [
+        {
+          "id": "BasicBuildingTool",
+          "qty": 1
+        },
+        {
+          "id": "PowerPack",
+          "qty": 1
+        },
+        {
+          "id": "Stone",
+          "qty": 500
+        },
+        {
+          "id": "Oil",
+          "qty": 500
+        },
+        {
+          "id": "PlantFiber",
+          "qty": 500
+        },
+        {
+          "id": "ScrapMetal",
+          "qty": 500
+        }
+      ]
+    },
+    "survival": {
+      "name": "Basic Survival Kit",
+      "items": [
+        {
+          "id": "Combat_Nati_SandtroutLeathers01_Helmet",
+          "qty": 1
+        },
+        {
+          "id": "PowerPack",
+          "qty": 1
+        },
+        {
+          "id": "Combat_Nati_SandtroutLeathers01_Top",
+          "qty": 1
+        },
+        {
+          "id": "Combat_Nati_SandtroutLeathers01_Bottom",
+          "qty": 1
+        },
+        {
+          "id": "Combat_Nati_SandtroutLeathers01_Gloves",
+          "qty": 1
+        },
+        {
+          "id": "Combat_Nati_SandtroutLeathers01_Boots",
+          "qty": 1
+        },
+        {
+          "id": "BasicBuildingTool",
+          "qty": 1
+        },
+        {
+          "id": "BodyFluidExtractor",
+          "qty": 1
+        },
+        {
+          "id": "Bloodsack_01",
+          "qty": 1
+        },
+        {
+          "id": "ChoamSda1",
+          "qty": 1
+        },
+        {
+          "id": "Ammo",
+          "qty": 1000
+        },
+        {
+          "id": "HealthPack_Channeled",
+          "qty": 20
+        }
+      ]
+    }
+  }
+}

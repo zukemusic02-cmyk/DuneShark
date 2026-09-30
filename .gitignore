@@ -1,0 +1,16 @@
+__pycache__/
+*.bak*
+*.log
+hotkeys_log.txt
+settings.json
+profiles.json
+hotkeys.json
+move_base.json
+*_original.json
+game_builds.json
+items_game.json
+icons_export/
+release/_build/
+release/_dist/
+release/DuneShark/
+release/*.zip

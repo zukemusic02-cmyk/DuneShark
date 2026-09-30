@@ -1,0 +1,13 @@
+{
+  "_source": "Dune Awakening DT_ItemCardTextStyles (TextStyle.ColorAndOpacity, linear -> sRGB), read from game memory 2026-09-28. Edit via a future 'Personalize' option. Augment colours: AugmentSettings.m_AugmentTagColorMappings (Items.Augment.* / Items.Schematics.Augments.*).",
+  "Default": "#c0985b",
+  "Fremen": "#e0763a",
+  "OldImperial": "#5b85be",
+  "GreatHouse": "#5b754d",
+  "Unique": "#66538e",
+  "PolarCap": "#4bcbff",
+  "AugmentRanged": "#f9f579",
+  "AugmentMelee": "#ec9382",
+  "AugmentArmor": "#74cca8",
+  "AugmentMisc": "#82b9ff"
+}

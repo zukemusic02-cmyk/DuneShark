@@ -1,0 +1,13894 @@
+{
+ "T6_Augment_Acuracy1": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "EnergyDamageMitigation"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_EnergyMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "PhysicalDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_PhysicalMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.00375,
+      0.0075
+     ],
+     "2": [
+      0.01,
+      0.015
+     ],
+     "3": [
+      0.0175,
+      0.0225
+     ],
+     "4": [
+      0.025,
+      0.031
+     ],
+     "5": [
+      0.0325,
+      0.04
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor10": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "EnergyDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_EnergyMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.006,
+      0.01
+     ],
+     "2": [
+      0.013,
+      0.02016
+     ],
+     "3": [
+      0.022,
+      0.03106
+     ],
+     "4": [
+      0.0325,
+      0.0425
+     ],
+     "5": [
+      0.043,
+      0.055
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "PoisonDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_PoisonMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor11": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "EnergyDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_EnergyMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "PoisonDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_PoisonMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.00375,
+      0.0075
+     ],
+     "2": [
+      0.01,
+      0.015
+     ],
+     "3": [
+      0.0175,
+      0.0225
+     ],
+     "4": [
+      0.025,
+      0.031
+     ],
+     "5": [
+      0.0325,
+      0.04
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor12": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "DartDamageMitigation",
+     "HeavyDartDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_DartMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.005,
+      0.01
+     ],
+     "2": [
+      0.0125,
+      0.02
+     ],
+     "3": [
+      0.022,
+      0.03
+     ],
+     "4": [
+      0.0325,
+      0.042
+     ],
+     "5": [
+      0.0425,
+      0.055
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor13": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "PoisonDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_PoisonMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "HeatDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_HeatMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.0025,
+      0.005
+     ],
+     "2": [
+      0.006,
+      0.00875
+     ],
+     "3": [
+      0.01,
+      0.01375
+     ],
+     "4": [
+      0.015,
+      0.02
+     ],
+     "5": [
+      0.0225,
+      0.03
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor14": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "DartDamageMitigation",
+     "HeavyDartDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_DartMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "MeleeDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_MeleeMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.00375,
+      0.0075
+     ],
+     "2": [
+      0.01,
+      0.015
+     ],
+     "3": [
+      0.0175,
+      0.0225
+     ],
+     "4": [
+      0.025,
+      0.031
+     ],
+     "5": [
+      0.0325,
+      0.04
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor16": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "DartDamageMitigation",
+     "HeavyDartDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_DartMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "RadiationDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_RadiationMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      -0.0
+     ],
+     "1": [
+      0.01,
+      0.019
+     ],
+     "2": [
+      0.02,
+      0.029
+     ],
+     "3": [
+      0.03,
+      0.039
+     ],
+     "4": [
+      0.04,
+      0.049
+     ],
+     "5": [
+      0.05,
+      0.06
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "MeleeDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_MeleeMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "HeatDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_HeatMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.0025,
+      0.005
+     ],
+     "2": [
+      0.006,
+      0.00875
+     ],
+     "3": [
+      0.01,
+      0.01375
+     ],
+     "4": [
+      0.015,
+      0.02
+     ],
+     "5": [
+      0.0225,
+      0.03
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor17": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "RadiationDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_RadiationMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      -0.0
+     ],
+     "1": [
+      0.01,
+      0.019
+     ],
+     "2": [
+      0.02,
+      0.029
+     ],
+     "3": [
+      0.03,
+      0.039
+     ],
+     "4": [
+      0.04,
+      0.049
+     ],
+     "5": [
+      0.05,
+      0.06
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor2": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "PhysicalDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_PhysicalMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.00375,
+      0.0075
+     ],
+     "2": [
+      0.01,
+      0.015
+     ],
+     "3": [
+      0.0175,
+      0.0225
+     ],
+     "4": [
+      0.025,
+      0.031
+     ],
+     "5": [
+      0.0325,
+      0.04
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "DartDamageMitigation",
+     "HeavyDartDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_DartMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor3": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "MeleeDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_MeleeMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.00375,
+      0.0075
+     ],
+     "2": [
+      0.01,
+      0.015
+     ],
+     "3": [
+      0.0175,
+      0.0225
+     ],
+     "4": [
+      0.025,
+      0.031
+     ],
+     "5": [
+      0.0325,
+      0.04
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "HeatDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_HeatMitigationPenalty_Halved",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.005,
+      -0.005
+     ],
+     "2": [
+      -0.005,
+      -0.005
+     ],
+     "3": [
+      -0.005,
+      -0.005
+     ],
+     "4": [
+      -0.005,
+      -0.005
+     ],
+     "5": [
+      -0.005,
+      -0.005
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "PoisonDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_PoisonMitigationPenalty_Halved",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.005,
+      -0.005
+     ],
+     "2": [
+      -0.005,
+      -0.005
+     ],
+     "3": [
+      -0.005,
+      -0.005
+     ],
+     "4": [
+      -0.005,
+      -0.005
+     ],
+     "5": [
+      -0.005,
+      -0.005
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor4": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "DartDamageMitigation",
+     "HeavyDartDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_DartMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.005,
+      0.01
+     ],
+     "2": [
+      0.0125,
+      0.02
+     ],
+     "3": [
+      0.022,
+      0.03
+     ],
+     "4": [
+      0.0325,
+      0.042
+     ],
+     "5": [
+      0.0425,
+      0.055
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "MeleeDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_MeleeMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor5": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "PhysicalDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_PhysicalMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "EnergyDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_EnergyMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.006,
+      0.01
+     ],
+     "2": [
+      0.013,
+      0.02016
+     ],
+     "3": [
+      0.022,
+      0.03106
+     ],
+     "4": [
+      0.0325,
+      0.0425
+     ],
+     "5": [
+      0.043,
+      0.055
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor6": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_BaseArmorBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.04
+     ],
+     "2": [
+      1.05,
+      1.08
+     ],
+     "3": [
+      1.09,
+      1.12
+     ],
+     "4": [
+      1.13,
+      1.16
+     ],
+     "5": [
+      1.17,
+      1.2
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor8": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [],
+    "armor": [
+     "DehydrationCaptureModifier"
+    ],
+    "item": [],
+    "curve": "CV_Global_DehydrationCaptureBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.2
+     ],
+     "2": [
+      1.3,
+      1.4
+     ],
+     "3": [
+      1.5,
+      1.6
+     ],
+     "4": [
+      1.7,
+      1.8
+     ],
+     "5": [
+      1.9,
+      2.0
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Armor9": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "PoisonDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_PoisonMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.00375,
+      0.0075
+     ],
+     "2": [
+      0.01,
+      0.015
+     ],
+     "3": [
+      0.0175,
+      0.0225
+     ],
+     "4": [
+      0.025,
+      0.031
+     ],
+     "5": [
+      0.0325,
+      0.04
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "HeatDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_HeatMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_BR1": {
+  "min_grade": 4,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFirePenalty_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.8,
+      0.8
+     ],
+     "2": [
+      0.8,
+      0.8
+     ],
+     "3": [
+      0.8,
+      0.8
+     ],
+     "4": [
+      0.8,
+      0.8
+     ],
+     "5": [
+      0.8,
+      0.8
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.0,
+      1.0
+     ],
+     "2": [
+      1.03,
+      1.05
+     ],
+     "3": [
+      1.06,
+      1.09
+     ],
+     "4": [
+      1.1,
+      1.14
+     ],
+     "5": [
+      1.15,
+      1.2
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_BR2": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_BR3": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.75,
+      0.75
+     ],
+     "2": [
+      0.75,
+      0.75
+     ],
+     "3": [
+      0.75,
+      0.75
+     ],
+     "4": [
+      0.75,
+      0.75
+     ],
+     "5": [
+      0.75,
+      0.75
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.3
+     ],
+     "2": [
+      1.3,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.3
+     ],
+     "4": [
+      1.3,
+      1.3
+     ],
+     "5": [
+      1.3,
+      1.3
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_BR4": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.98,
+      0.98
+     ],
+     "2": [
+      0.96,
+      0.96
+     ],
+     "3": [
+      0.94,
+      0.94
+     ],
+     "4": [
+      0.92,
+      0.92
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_BR8": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [
+     "CritDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_CritDamageBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.03,
+      0.05
+     ],
+     "2": [
+      0.06,
+      0.1
+     ],
+     "3": [
+      0.1,
+      0.16
+     ],
+     "4": [
+      0.2,
+      0.31
+     ],
+     "5": [
+      0.34,
+      0.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizeBonus_BRSMG",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.2
+     ],
+     "2": [
+      1.2,
+      1.4
+     ],
+     "3": [
+      1.4,
+      1.6
+     ],
+     "4": [
+      1.6,
+      1.8
+     ],
+     "5": [
+      1.8,
+      2.0
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainBonus_BRSMG",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.9
+     ],
+     "3": [
+      0.75,
+      0.85
+     ],
+     "4": [
+      0.7,
+      0.8
+     ],
+     "5": [
+      0.65,
+      0.75
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_ColdProtection1": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "ColdProtectionValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_ColdProtectionBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.6,
+      1.0
+     ],
+     "2": [
+      1.1,
+      1.5
+     ],
+     "3": [
+      1.6,
+      2.0
+     ],
+     "4": [
+      2.1,
+      2.5
+     ],
+     "5": [
+      3.0,
+      4.0
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Damage1": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Damage2": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus_Extra",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.08,
+      1.1
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_DeathDurabilityOff": {
+  "min_grade": 5,
+  "stats": [
+   {
+    "op": 2,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [],
+    "item": [
+     "DefeatDurabilityLoss"
+    ],
+    "curve": "CV_Global_DeathDurabilityOff",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.0,
+      0.0
+     ],
+     "2": [
+      0.0,
+      0.0
+     ],
+     "3": [
+      0.0,
+      0.0
+     ],
+     "4": [
+      0.0,
+      0.0
+     ],
+     "5": [
+      0.0,
+      0.0
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Fireballer1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedPenalty_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.2,
+      1.2
+     ],
+     "2": [
+      1.2,
+      1.2
+     ],
+     "3": [
+      1.2,
+      1.2
+     ],
+     "4": [
+      1.2,
+      1.2
+     ],
+     "5": [
+      1.2,
+      1.2
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Fireballer2": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.04,
+      1.1
+     ],
+     "2": [
+      1.11,
+      1.2
+     ],
+     "3": [
+      1.22,
+      1.3
+     ],
+     "4": [
+      1.33,
+      1.4
+     ],
+     "5": [
+      1.44,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.975
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.98,
+      0.98
+     ],
+     "2": [
+      0.96,
+      0.96
+     ],
+     "3": [
+      0.94,
+      0.94
+     ],
+     "4": [
+      0.92,
+      0.92
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Flamethrower1": {
+  "min_grade": 4,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Flamethrower2": {
+  "min_grade": 5,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "FireDoT"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_FireDoTDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.0,
+      1.0
+     ],
+     "2": [
+      1.0,
+      1.0
+     ],
+     "3": [
+      1.0,
+      1.0
+     ],
+     "4": [
+      3.0,
+      3.0
+     ],
+     "5": [
+      4.0,
+      4.0
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Flamethrower3": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.05,
+      1.05
+     ],
+     "2": [
+      1.05,
+      1.05
+     ],
+     "3": [
+      1.05,
+      1.05
+     ],
+     "4": [
+      1.05,
+      1.05
+     ],
+     "5": [
+      1.05,
+      1.05
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.05
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.11,
+      1.15
+     ],
+     "4": [
+      1.17,
+      1.2
+     ],
+     "5": [
+      1.22,
+      1.25
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.04,
+      1.1
+     ],
+     "2": [
+      1.11,
+      1.2
+     ],
+     "3": [
+      1.22,
+      1.3
+     ],
+     "4": [
+      1.33,
+      1.4
+     ],
+     "5": [
+      1.44,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.975
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Flamethrower4": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.98,
+      0.98
+     ],
+     "2": [
+      0.96,
+      0.96
+     ],
+     "3": [
+      0.94,
+      0.94
+     ],
+     "4": [
+      0.92,
+      0.92
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Headshotdamage1": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [
+     "CritDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_CritDamageBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.03,
+      0.05
+     ],
+     "2": [
+      0.06,
+      0.1
+     ],
+     "3": [
+      0.1,
+      0.16
+     ],
+     "4": [
+      0.2,
+      0.31
+     ],
+     "5": [
+      0.34,
+      0.5
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_HeavyPistol1": {
+  "min_grade": 4,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [
+     "CritDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_CritDamageBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.03,
+      0.05
+     ],
+     "2": [
+      0.06,
+      0.1
+     ],
+     "3": [
+      0.1,
+      0.16
+     ],
+     "4": [
+      0.2,
+      0.31
+     ],
+     "5": [
+      0.34,
+      0.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFirePenalty_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.8,
+      0.8
+     ],
+     "2": [
+      0.8,
+      0.8
+     ],
+     "3": [
+      0.8,
+      0.8
+     ],
+     "4": [
+      0.8,
+      0.8
+     ],
+     "5": [
+      0.8,
+      0.8
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_HeavyPistol2": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.0,
+      1.0
+     ],
+     "2": [
+      1.03,
+      1.05
+     ],
+     "3": [
+      1.06,
+      1.09
+     ],
+     "4": [
+      1.1,
+      1.14
+     ],
+     "5": [
+      1.15,
+      1.2
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizePenalty_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.5,
+      0.5
+     ],
+     "2": [
+      0.5,
+      0.5
+     ],
+     "3": [
+      0.5,
+      0.5
+     ],
+     "4": [
+      0.5,
+      0.5
+     ],
+     "5": [
+      0.5,
+      0.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.6,
+      1.6
+     ],
+     "2": [
+      1.6,
+      1.6
+     ],
+     "3": [
+      1.6,
+      1.6
+     ],
+     "4": [
+      1.6,
+      1.6
+     ],
+     "5": [
+      1.6,
+      1.6
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_HeavyPistol3": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.98,
+      0.98
+     ],
+     "2": [
+      0.96,
+      0.96
+     ],
+     "3": [
+      0.94,
+      0.94
+     ],
+     "4": [
+      0.92,
+      0.92
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_HeavyPistol4": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.05,
+      1.05
+     ],
+     "2": [
+      1.05,
+      1.05
+     ],
+     "3": [
+      1.05,
+      1.05
+     ],
+     "4": [
+      1.05,
+      1.05
+     ],
+     "5": [
+      1.05,
+      1.05
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizeBonus_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.08,
+      1.2
+     ],
+     "2": [
+      1.22,
+      1.4
+     ],
+     "3": [
+      1.44,
+      1.6
+     ],
+     "4": [
+      1.66,
+      1.8
+     ],
+     "5": [
+      1.88,
+      2.0
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainBonus_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.88
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.68
+     ],
+     "5": [
+      0.5,
+      0.58
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_HeavyPistol5": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Lasgun1": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.05,
+      1.05
+     ],
+     "2": [
+      1.05,
+      1.05
+     ],
+     "3": [
+      1.05,
+      1.05
+     ],
+     "4": [
+      1.05,
+      1.05
+     ],
+     "5": [
+      1.05,
+      1.05
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.75,
+      0.75
+     ],
+     "2": [
+      0.75,
+      0.75
+     ],
+     "3": [
+      0.75,
+      0.75
+     ],
+     "4": [
+      0.75,
+      0.75
+     ],
+     "5": [
+      0.75,
+      0.75
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.3
+     ],
+     "2": [
+      1.3,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.3
+     ],
+     "4": [
+      1.3,
+      1.3
+     ],
+     "5": [
+      1.3,
+      1.3
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Lasgun2": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangeBonus_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.04,
+      1.1
+     ],
+     "2": [
+      1.12,
+      1.2
+     ],
+     "3": [
+      1.22,
+      1.3
+     ],
+     "4": [
+      1.34,
+      1.4
+     ],
+     "5": [
+      1.44,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [],
+    "armor": [],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Lasgun3": {
+  "min_grade": 4,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.04,
+      1.1
+     ],
+     "2": [
+      1.11,
+      1.2
+     ],
+     "3": [
+      1.22,
+      1.3
+     ],
+     "4": [
+      1.33,
+      1.4
+     ],
+     "5": [
+      1.44,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.975
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Lasgun4": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RecoilPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.05,
+      1.05
+     ],
+     "2": [
+      1.05,
+      1.05
+     ],
+     "3": [
+      1.05,
+      1.05
+     ],
+     "4": [
+      1.05,
+      1.05
+     ],
+     "5": [
+      1.05,
+      1.05
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Lmg1": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizeBonus_LMG1",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.375
+     ],
+     "2": [
+      1.25,
+      1.75
+     ],
+     "3": [
+      1.625,
+      2.125
+     ],
+     "4": [
+      2.0,
+      2.5
+     ],
+     "5": [
+      2.5,
+      3.0
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainBonus_LMG1",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.8,
+      0.9
+     ],
+     "2": [
+      0.7,
+      0.8
+     ],
+     "3": [
+      0.6,
+      0.7
+     ],
+     "4": [
+      0.5,
+      0.6
+     ],
+     "5": [
+      0.4,
+      0.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.98,
+      0.98
+     ],
+     "2": [
+      0.96,
+      0.96
+     ],
+     "3": [
+      0.94,
+      0.94
+     ],
+     "4": [
+      0.92,
+      0.92
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Lmg4": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_RangeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.05
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.11,
+      1.15
+     ],
+     "4": [
+      1.17,
+      1.2
+     ],
+     "5": [
+      1.22,
+      1.25
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFirePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Lmg5": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamageBonus_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.0,
+      1.0
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.28
+     ],
+     "5": [
+      1.3,
+      1.4
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.05,
+      1.05
+     ],
+     "2": [
+      1.05,
+      1.05
+     ],
+     "3": [
+      1.05,
+      1.05
+     ],
+     "4": [
+      1.05,
+      1.05
+     ],
+     "5": [
+      1.05,
+      1.05
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Lmg6": {
+  "min_grade": 4,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Magazinecapacity1": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.04,
+      1.1
+     ],
+     "2": [
+      1.11,
+      1.2
+     ],
+     "3": [
+      1.22,
+      1.3
+     ],
+     "4": [
+      1.33,
+      1.4
+     ],
+     "5": [
+      1.44,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.975
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [],
+    "armor": [],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_MaulaPistol1": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [
+     "CritDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_CritDamagePenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.15,
+      -0.15
+     ],
+     "2": [
+      -0.15,
+      -0.15
+     ],
+     "3": [
+      -0.15,
+      -0.15
+     ],
+     "4": [
+      -0.15,
+      -0.15
+     ],
+     "5": [
+      -0.15,
+      -0.15
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_MaulaPistol2": {
+  "min_grade": 4,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.0,
+      1.0
+     ],
+     "2": [
+      1.03,
+      1.05
+     ],
+     "3": [
+      1.06,
+      1.09
+     ],
+     "4": [
+      1.1,
+      1.14
+     ],
+     "5": [
+      1.15,
+      1.2
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.75,
+      0.75
+     ],
+     "2": [
+      0.75,
+      0.75
+     ],
+     "3": [
+      0.75,
+      0.75
+     ],
+     "4": [
+      0.75,
+      0.75
+     ],
+     "5": [
+      0.75,
+      0.75
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.3
+     ],
+     "2": [
+      1.3,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.3
+     ],
+     "4": [
+      1.3,
+      1.3
+     ],
+     "5": [
+      1.3,
+      1.3
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_MaulaPistol3": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizeBonus_MaulaPistol",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.04,
+      1.15
+     ],
+     "2": [
+      1.15,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.45
+     ],
+     "4": [
+      1.45,
+      1.6
+     ],
+     "5": [
+      1.6,
+      1.75
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainBonus_MaulaPistol",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.85,
+      0.9
+     ],
+     "3": [
+      0.8,
+      0.85
+     ],
+     "4": [
+      0.75,
+      0.8
+     ],
+     "5": [
+      0.7,
+      0.75
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_MaulaPistol4": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFirePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.05
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.11,
+      1.15
+     ],
+     "4": [
+      1.17,
+      1.2
+     ],
+     "5": [
+      1.22,
+      1.25
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.98,
+      0.98
+     ],
+     "2": [
+      0.96,
+      0.96
+     ],
+     "3": [
+      0.94,
+      0.94
+     ],
+     "4": [
+      0.92,
+      0.92
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_MaulaPistol5": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [
+     "CritDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_CritDamageBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.03,
+      0.05
+     ],
+     "2": [
+      0.06,
+      0.1
+     ],
+     "3": [
+      0.1,
+      0.16
+     ],
+     "4": [
+      0.2,
+      0.31
+     ],
+     "5": [
+      0.34,
+      0.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFirePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.75,
+      0.75
+     ],
+     "2": [
+      0.75,
+      0.75
+     ],
+     "3": [
+      0.75,
+      0.75
+     ],
+     "4": [
+      0.75,
+      0.75
+     ],
+     "5": [
+      0.75,
+      0.75
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.3
+     ],
+     "2": [
+      1.3,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.3
+     ],
+     "4": [
+      1.3,
+      1.3
+     ],
+     "5": [
+      1.3,
+      1.3
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Melee1": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MeleeDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.07,
+      1.15
+     ],
+     "3": [
+      1.14,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Melee2": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "AttackStaminaBaseCost"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_StaminaAttackBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.97
+     ],
+     "2": [
+      0.91,
+      0.93
+     ],
+     "3": [
+      0.87,
+      0.89
+     ],
+     "4": [
+      0.83,
+      0.85
+     ],
+     "5": [
+      0.8,
+      0.82
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Melee3": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "BlockStaminaCost"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_StaminaBlockBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.97
+     ],
+     "2": [
+      0.91,
+      0.93
+     ],
+     "3": [
+      0.87,
+      0.89
+     ],
+     "4": [
+      0.83,
+      0.85
+     ],
+     "5": [
+      0.8,
+      0.82
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Melee4": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "AttackStaminaBaseCost"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_StaminaAttackBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.97
+     ],
+     "2": [
+      0.91,
+      0.93
+     ],
+     "3": [
+      0.87,
+      0.89
+     ],
+     "4": [
+      0.83,
+      0.85
+     ],
+     "5": [
+      0.8,
+      0.82
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "BlockStaminaCost"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_StaminaBlockPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Melee5": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MeleeDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "AttackStaminaBaseCost"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_StaminaAttackBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.97
+     ],
+     "2": [
+      0.91,
+      0.93
+     ],
+     "3": [
+      0.87,
+      0.89
+     ],
+     "4": [
+      0.83,
+      0.85
+     ],
+     "5": [
+      0.8,
+      0.82
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [],
+    "armor": [],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Melee6": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MeleeDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.07,
+      1.15
+     ],
+     "3": [
+      1.14,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "BlockStaminaCost"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_StaminaBlockPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Melee7": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "AttackStaminaBaseCost"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_StaminaAttackPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "BlockStaminaCost"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_StaminaBlockBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.97
+     ],
+     "2": [
+      0.91,
+      0.93
+     ],
+     "3": [
+      0.87,
+      0.89
+     ],
+     "4": [
+      0.83,
+      0.85
+     ],
+     "5": [
+      0.8,
+      0.82
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Melee8": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MeleeDamagePenalty_Melee8",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.93,
+      0.93
+     ],
+     "2": [
+      0.93,
+      0.93
+     ],
+     "3": [
+      0.93,
+      0.93
+     ],
+     "4": [
+      0.93,
+      0.93
+     ],
+     "5": [
+      0.93,
+      0.93
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "AttackStaminaBaseCost"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_StaminaAttackBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.97
+     ],
+     "2": [
+      0.91,
+      0.93
+     ],
+     "3": [
+      0.87,
+      0.89
+     ],
+     "4": [
+      0.83,
+      0.85
+     ],
+     "5": [
+      0.8,
+      0.82
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "BlockStaminaCost"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_StaminaBlockBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.97
+     ],
+     "2": [
+      0.91,
+      0.93
+     ],
+     "3": [
+      0.87,
+      0.89
+     ],
+     "4": [
+      0.83,
+      0.85
+     ],
+     "5": [
+      0.8,
+      0.82
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Melee9": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MeleeDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.07,
+      1.15
+     ],
+     "3": [
+      1.14,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "AttackStaminaBaseCost"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_StaminaAttackPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Armor1": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "ColdProtectionValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_ColdProtectionBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.6,
+      1.0
+     ],
+     "2": [
+      1.1,
+      1.5
+     ],
+     "3": [
+      1.6,
+      2.0
+     ],
+     "4": [
+      2.1,
+      2.5
+     ],
+     "5": [
+      3.0,
+      4.0
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Armor2": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "ColdDamageMitigation"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_CryoMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.004,
+      0.009
+     ],
+     "2": [
+      0.01,
+      0.014
+     ],
+     "3": [
+      0.018,
+      0.024
+     ],
+     "4": [
+      0.025,
+      0.031
+     ],
+     "5": [
+      0.32,
+      0.4
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "EnergyDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_EnergyMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Armor3": {
+  "min_grade": 4,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_BaseArmorPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.99,
+      0.99
+     ],
+     "2": [
+      0.99,
+      0.99
+     ],
+     "3": [
+      0.99,
+      0.99
+     ],
+     "4": [
+      0.99,
+      0.99
+     ],
+     "5": [
+      0.99,
+      0.99
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [],
+    "armor": [
+     "DashStaminaCost"
+    ],
+    "item": [],
+    "curve": "CV_Global_DashStaminaBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.985,
+      0.99
+     ],
+     "2": [
+      0.985,
+      0.99
+     ],
+     "3": [
+      0.985,
+      0.99
+     ],
+     "4": [
+      0.985,
+      0.99
+     ],
+     "5": [
+      0.98,
+      0.984
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Armor4": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "ColdDamageMitigation"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_CryoMitigationBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.004,
+      0.009
+     ],
+     "2": [
+      0.01,
+      0.014
+     ],
+     "3": [
+      0.018,
+      0.024
+     ],
+     "4": [
+      0.025,
+      0.031
+     ],
+     "5": [
+      0.32,
+      0.4
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "HeatDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_HeatMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Armor5": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "ColdProtectionValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_ColdProtectionBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.6,
+      1.0
+     ],
+     "2": [
+      1.1,
+      1.5
+     ],
+     "3": [
+      1.6,
+      2.0
+     ],
+     "4": [
+      2.1,
+      2.5
+     ],
+     "5": [
+      3.0,
+      4.0
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_BaseArmorPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.99,
+      0.99
+     ],
+     "2": [
+      0.99,
+      0.99
+     ],
+     "3": [
+      0.99,
+      0.99
+     ],
+     "4": [
+      0.99,
+      0.99
+     ],
+     "5": [
+      0.99,
+      0.99
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Armor6": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [],
+    "armor": [
+     "DashStaminaCost"
+    ],
+    "item": [],
+    "curve": "CV_Global_DashStaminaBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.985,
+      0.99
+     ],
+     "2": [
+      0.985,
+      0.99
+     ],
+     "3": [
+      0.985,
+      0.99
+     ],
+     "4": [
+      0.985,
+      0.99
+     ],
+     "5": [
+      0.98,
+      0.984
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "ColdDamageMitigation"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_CryoMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [],
+    "armor": [
+     "MeleeDamageMitigation"
+    ],
+    "item": [],
+    "curve": "CV_Global_MeleeMitigationPenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.01,
+      -0.01
+     ],
+     "2": [
+      -0.01,
+      -0.01
+     ],
+     "3": [
+      -0.01,
+      -0.01
+     ],
+     "4": [
+      -0.01,
+      -0.01
+     ],
+     "5": [
+      -0.01,
+      -0.01
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_BR1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.05
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.11,
+      1.15
+     ],
+     "4": [
+      1.17,
+      1.2
+     ],
+     "5": [
+      1.22,
+      1.25
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Fireballer1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamageBonus_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.0,
+      1.0
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.28
+     ],
+     "5": [
+      1.3,
+      1.4
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.75,
+      0.75
+     ],
+     "2": [
+      0.75,
+      0.75
+     ],
+     "3": [
+      0.75,
+      0.75
+     ],
+     "4": [
+      0.75,
+      0.75
+     ],
+     "5": [
+      0.75,
+      0.75
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.3
+     ],
+     "2": [
+      1.3,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.3
+     ],
+     "4": [
+      1.3,
+      1.3
+     ],
+     "5": [
+      1.3,
+      1.3
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Flamethrower1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFirePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamageBonus_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.0,
+      1.0
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.28
+     ],
+     "5": [
+      1.3,
+      1.4
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_HeavyPistol1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangeBonus_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.04,
+      1.1
+     ],
+     "2": [
+      1.12,
+      1.2
+     ],
+     "3": [
+      1.22,
+      1.3
+     ],
+     "4": [
+      1.34,
+      1.4
+     ],
+     "5": [
+      1.44,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.3
+     ],
+     "2": [
+      1.3,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.3
+     ],
+     "4": [
+      1.3,
+      1.3
+     ],
+     "5": [
+      1.3,
+      1.3
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.75,
+      0.75
+     ],
+     "2": [
+      0.75,
+      0.75
+     ],
+     "3": [
+      0.75,
+      0.75
+     ],
+     "4": [
+      0.75,
+      0.75
+     ],
+     "5": [
+      0.75,
+      0.75
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Lasgun1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.94
+     ],
+     "2": [
+      0.8,
+      0.88
+     ],
+     "3": [
+      0.7,
+      0.82
+     ],
+     "4": [
+      0.6,
+      0.76
+     ],
+     "5": [
+      0.5,
+      0.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFirePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.3
+     ],
+     "2": [
+      1.3,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.3
+     ],
+     "4": [
+      1.3,
+      1.3
+     ],
+     "5": [
+      1.3,
+      1.3
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Lmg1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.98,
+      0.98
+     ],
+     "2": [
+      0.96,
+      0.96
+     ],
+     "3": [
+      0.94,
+      0.94
+     ],
+     "4": [
+      0.92,
+      0.92
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_MaulaPistol1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [
+     "CritDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_CritDamageBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.03,
+      0.05
+     ],
+     "2": [
+      0.06,
+      0.1
+     ],
+     "3": [
+      0.1,
+      0.16
+     ],
+     "4": [
+      0.2,
+      0.31
+     ],
+     "5": [
+      0.34,
+      0.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.05,
+      1.05
+     ],
+     "2": [
+      1.05,
+      1.05
+     ],
+     "3": [
+      1.05,
+      1.05
+     ],
+     "4": [
+      1.05,
+      1.05
+     ],
+     "5": [
+      1.05,
+      1.05
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Melee1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MeleeDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.07,
+      1.15
+     ],
+     "3": [
+      1.14,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Melee3": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [],
+    "armor": [],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MeleeDamagePenalty_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "AttackStaminaBaseCost"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_StaminaAttackBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.97
+     ],
+     "2": [
+      0.91,
+      0.93
+     ],
+     "3": [
+      0.87,
+      0.89
+     ],
+     "4": [
+      0.83,
+      0.85
+     ],
+     "5": [
+      0.8,
+      0.82
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_RocketLauncher1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.0,
+      1.0
+     ],
+     "2": [
+      1.03,
+      1.05
+     ],
+     "3": [
+      1.06,
+      1.09
+     ],
+     "4": [
+      1.1,
+      1.14
+     ],
+     "5": [
+      1.15,
+      1.2
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Scattergun1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [
+     "CritDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_CritDamagePenalty",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      -0.15,
+      -0.15
+     ],
+     "2": [
+      -0.15,
+      -0.15
+     ],
+     "3": [
+      -0.15,
+      -0.15
+     ],
+     "4": [
+      -0.15,
+      -0.15
+     ],
+     "5": [
+      -0.15,
+      -0.15
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_MagazineSizeBonus_BRSMG",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.2
+     ],
+     "2": [
+      1.2,
+      1.4
+     ],
+     "3": [
+      1.4,
+      1.6
+     ],
+     "4": [
+      1.6,
+      1.8
+     ],
+     "5": [
+      1.8,
+      2.0
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainBonus_BRSMG",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.9
+     ],
+     "3": [
+      0.75,
+      0.85
+     ],
+     "4": [
+      0.7,
+      0.8
+     ],
+     "5": [
+      0.65,
+      0.75
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Shotgun1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.05,
+      1.05
+     ],
+     "2": [
+      1.05,
+      1.05
+     ],
+     "3": [
+      1.05,
+      1.05
+     ],
+     "4": [
+      1.05,
+      1.05
+     ],
+     "5": [
+      1.05,
+      1.05
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.75,
+      0.75
+     ],
+     "2": [
+      0.75,
+      0.75
+     ],
+     "3": [
+      0.75,
+      0.75
+     ],
+     "4": [
+      0.75,
+      0.75
+     ],
+     "5": [
+      0.75,
+      0.75
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.3
+     ],
+     "2": [
+      1.3,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.3
+     ],
+     "4": [
+      1.3,
+      1.3
+     ],
+     "5": [
+      1.3,
+      1.3
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.98,
+      0.98
+     ],
+     "2": [
+      0.96,
+      0.96
+     ],
+     "3": [
+      0.94,
+      0.94
+     ],
+     "4": [
+      0.92,
+      0.92
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_Spitdartrifle1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFirePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.98,
+      0.98
+     ],
+     "2": [
+      0.96,
+      0.96
+     ],
+     "3": [
+      0.94,
+      0.94
+     ],
+     "4": [
+      0.92,
+      0.92
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Polarcap_smg1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [
+     "CritDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_CritDamageBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.03,
+      0.05
+     ],
+     "2": [
+      0.06,
+      0.1
+     ],
+     "3": [
+      0.1,
+      0.16
+     ],
+     "4": [
+      0.2,
+      0.31
+     ],
+     "5": [
+      0.34,
+      0.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.05,
+      1.05
+     ],
+     "2": [
+      1.05,
+      1.05
+     ],
+     "3": [
+      1.05,
+      1.05
+     ],
+     "4": [
+      1.05,
+      1.05
+     ],
+     "5": [
+      1.05,
+      1.05
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Range1": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.05
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.11,
+      1.15
+     ],
+     "4": [
+      1.17,
+      1.2
+     ],
+     "5": [
+      1.22,
+      1.25
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Rateoffire1": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Recoil1": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_ReloadSpeed1": {
+  "min_grade": 1,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.98,
+      0.98
+     ],
+     "2": [
+      0.96,
+      0.96
+     ],
+     "3": [
+      0.94,
+      0.94
+     ],
+     "4": [
+      0.92,
+      0.92
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_RocketLauncher1": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEMinimumShieldDamage",
+     "AoEBaseShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "AoEInnerRadius",
+     "AoEOuterRadius"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_SplashRadiusBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.05,
+      1.1
+     ],
+     "2": [
+      1.11,
+      1.2
+     ],
+     "3": [
+      1.22,
+      1.3
+     ],
+     "4": [
+      1.33,
+      1.4
+     ],
+     "5": [
+      1.44,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.98,
+      0.98
+     ],
+     "2": [
+      0.96,
+      0.96
+     ],
+     "3": [
+      0.94,
+      0.94
+     ],
+     "4": [
+      0.92,
+      0.92
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_RocketLauncher2": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.0,
+      1.0
+     ],
+     "2": [
+      1.03,
+      1.05
+     ],
+     "3": [
+      1.06,
+      1.09
+     ],
+     "4": [
+      1.1,
+      1.14
+     ],
+     "5": [
+      1.15,
+      1.2
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_RocketLauncher3": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.98,
+      0.98
+     ],
+     "2": [
+      0.96,
+      0.96
+     ],
+     "3": [
+      0.94,
+      0.94
+     ],
+     "4": [
+      0.92,
+      0.92
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_RocketLauncher4": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage",
+     "ShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "AoEInnerRadius",
+     "AoEOuterRadius"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_SplashRadiusPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.85,
+      0.85
+     ],
+     "2": [
+      0.85,
+      0.85
+     ],
+     "3": [
+      0.85,
+      0.85
+     ],
+     "4": [
+      0.85,
+      0.85
+     ],
+     "5": [
+      0.85,
+      0.85
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Scattergun2": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFirePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [
+     "CritDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_CritDamageBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.03,
+      0.05
+     ],
+     "2": [
+      0.06,
+      0.1
+     ],
+     "3": [
+      0.1,
+      0.16
+     ],
+     "4": [
+      0.2,
+      0.31
+     ],
+     "5": [
+      0.34,
+      0.5
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Scattergun4": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.05
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.11,
+      1.15
+     ],
+     "4": [
+      1.17,
+      1.2
+     ],
+     "5": [
+      1.22,
+      1.25
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ScattergunOffsetDistance"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PelletSpreadPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.85,
+      0.85
+     ],
+     "2": [
+      0.85,
+      0.85
+     ],
+     "3": [
+      0.85,
+      0.85
+     ],
+     "4": [
+      0.85,
+      0.85
+     ],
+     "5": [
+      0.85,
+      0.85
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizeBonus_Shotguns",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.5
+     ],
+     "2": [
+      1.55,
+      1.75
+     ],
+     "3": [
+      1.8,
+      2.0
+     ],
+     "4": [
+      2.05,
+      2.25
+     ],
+     "5": [
+      2.3,
+      2.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainBonus_Shotguns",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.85,
+      0.9
+     ],
+     "3": [
+      0.8,
+      0.85
+     ],
+     "4": [
+      0.75,
+      0.8
+     ],
+     "5": [
+      0.7,
+      0.75
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Scattergun5": {
+  "min_grade": 4,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ScattergunOffsetDistance"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PelletSpreadBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.05
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.11,
+      1.15
+     ],
+     "4": [
+      1.16,
+      1.2
+     ],
+     "5": [
+      1.21,
+      1.25
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Scattergun6": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.75,
+      0.75
+     ],
+     "2": [
+      0.75,
+      0.75
+     ],
+     "3": [
+      0.75,
+      0.75
+     ],
+     "4": [
+      0.75,
+      0.75
+     ],
+     "5": [
+      0.75,
+      0.75
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.3
+     ],
+     "2": [
+      1.3,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.3
+     ],
+     "4": [
+      1.3,
+      1.3
+     ],
+     "5": [
+      1.3,
+      1.3
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ScattergunOffsetDistance"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PelletSpreadBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.05
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.11,
+      1.15
+     ],
+     "4": [
+      1.16,
+      1.2
+     ],
+     "5": [
+      1.21,
+      1.25
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Scattergun7": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ScattergunOffsetDistance"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PelletSpreadPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.85,
+      0.85
+     ],
+     "2": [
+      0.85,
+      0.85
+     ],
+     "3": [
+      0.85,
+      0.85
+     ],
+     "4": [
+      0.85,
+      0.85
+     ],
+     "5": [
+      0.85,
+      0.85
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.05,
+      1.05
+     ],
+     "2": [
+      1.05,
+      1.05
+     ],
+     "3": [
+      1.05,
+      1.05
+     ],
+     "4": [
+      1.05,
+      1.05
+     ],
+     "5": [
+      1.05,
+      1.05
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Scattergun8": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.75,
+      0.75
+     ],
+     "2": [
+      0.75,
+      0.75
+     ],
+     "3": [
+      0.75,
+      0.75
+     ],
+     "4": [
+      0.75,
+      0.75
+     ],
+     "5": [
+      0.75,
+      0.75
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.3
+     ],
+     "2": [
+      1.3,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.3
+     ],
+     "4": [
+      1.3,
+      1.3
+     ],
+     "5": [
+      1.3,
+      1.3
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.05
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.11,
+      1.15
+     ],
+     "4": [
+      1.17,
+      1.2
+     ],
+     "5": [
+      1.22,
+      1.25
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Shielddamage1": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.0,
+      1.0
+     ],
+     "2": [
+      1.03,
+      1.05
+     ],
+     "3": [
+      1.06,
+      1.09
+     ],
+     "4": [
+      1.1,
+      1.14
+     ],
+     "5": [
+      1.15,
+      1.2
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Shotgun1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [
+     "CritDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_CritDamageBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.03,
+      0.05
+     ],
+     "2": [
+      0.06,
+      0.1
+     ],
+     "3": [
+      0.1,
+      0.16
+     ],
+     "4": [
+      0.2,
+      0.31
+     ],
+     "5": [
+      0.34,
+      0.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFirePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.05
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.11,
+      1.15
+     ],
+     "4": [
+      1.17,
+      1.2
+     ],
+     "5": [
+      1.22,
+      1.25
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Shotgun2": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.75,
+      0.75
+     ],
+     "2": [
+      0.75,
+      0.75
+     ],
+     "3": [
+      0.75,
+      0.75
+     ],
+     "4": [
+      0.75,
+      0.75
+     ],
+     "5": [
+      0.75,
+      0.75
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.3
+     ],
+     "2": [
+      1.3,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.3
+     ],
+     "4": [
+      1.3,
+      1.3
+     ],
+     "5": [
+      1.3,
+      1.3
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Shotgun3": {
+  "min_grade": 4,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Shotgun4": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.05,
+      1.05
+     ],
+     "2": [
+      1.05,
+      1.05
+     ],
+     "3": [
+      1.05,
+      1.05
+     ],
+     "4": [
+      1.05,
+      1.05
+     ],
+     "5": [
+      1.05,
+      1.05
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizeBonus_Shotguns",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.5
+     ],
+     "2": [
+      1.55,
+      1.75
+     ],
+     "3": [
+      1.8,
+      2.0
+     ],
+     "4": [
+      2.05,
+      2.25
+     ],
+     "5": [
+      2.3,
+      2.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainBonus_Shotguns",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.85,
+      0.9
+     ],
+     "3": [
+      0.8,
+      0.85
+     ],
+     "4": [
+      0.75,
+      0.8
+     ],
+     "5": [
+      0.7,
+      0.75
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Shotgun5": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 0,
+    "weapon": [
+     "CritDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_CritDamageBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.03,
+      0.05
+     ],
+     "2": [
+      0.06,
+      0.1
+     ],
+     "3": [
+      0.1,
+      0.16
+     ],
+     "4": [
+      0.2,
+      0.31
+     ],
+     "5": [
+      0.34,
+      0.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.05,
+      1.05
+     ],
+     "2": [
+      1.05,
+      1.05
+     ],
+     "3": [
+      1.05,
+      1.05
+     ],
+     "4": [
+      1.05,
+      1.05
+     ],
+     "5": [
+      1.05,
+      1.05
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.75,
+      0.75
+     ],
+     "2": [
+      0.75,
+      0.75
+     ],
+     "3": [
+      0.75,
+      0.75
+     ],
+     "4": [
+      0.75,
+      0.75
+     ],
+     "5": [
+      0.75,
+      0.75
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.3
+     ],
+     "2": [
+      1.3,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.3
+     ],
+     "4": [
+      1.3,
+      1.3
+     ],
+     "5": [
+      1.3,
+      1.3
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.98,
+      0.98
+     ],
+     "2": [
+      0.96,
+      0.96
+     ],
+     "3": [
+      0.94,
+      0.94
+     ],
+     "4": [
+      0.92,
+      0.92
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_SpitdartRifle5": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.05,
+      1.05
+     ],
+     "2": [
+      1.05,
+      1.05
+     ],
+     "3": [
+      1.05,
+      1.05
+     ],
+     "4": [
+      1.05,
+      1.05
+     ],
+     "5": [
+      1.05,
+      1.05
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_SpitdartRifle6": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.0,
+      1.0
+     ],
+     "2": [
+      1.03,
+      1.05
+     ],
+     "3": [
+      1.06,
+      1.09
+     ],
+     "4": [
+      1.1,
+      1.14
+     ],
+     "5": [
+      1.15,
+      1.2
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.75,
+      0.75
+     ],
+     "2": [
+      0.75,
+      0.75
+     ],
+     "3": [
+      0.75,
+      0.75
+     ],
+     "4": [
+      0.75,
+      0.75
+     ],
+     "5": [
+      0.75,
+      0.75
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.3
+     ],
+     "2": [
+      1.3,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.3
+     ],
+     "4": [
+      1.3,
+      1.3
+     ],
+     "5": [
+      1.3,
+      1.3
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_SpitdartRifle7": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizeBonus_SpitDart_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.875,
+      2.4
+     ],
+     "2": [
+      2.375,
+      2.8
+     ],
+     "3": [
+      2.75,
+      3.2
+     ],
+     "4": [
+      3.125,
+      3.6
+     ],
+     "5": [
+      3.5,
+      4.0
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainBonus_SpitDart_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.45,
+      0.55
+     ],
+     "2": [
+      0.4,
+      0.5
+     ],
+     "3": [
+      0.35,
+      0.45
+     ],
+     "4": [
+      0.3,
+      0.4
+     ],
+     "5": [
+      0.25,
+      0.35
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_SpitdartRifle8": {
+  "min_grade": 4,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PoisonDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PoisonDamageBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.0,
+      0.0
+     ],
+     "2": [
+      0.0,
+      0.0
+     ],
+     "3": [
+      0.0,
+      0.0
+     ],
+     "4": [
+      2.0,
+      2.0
+     ],
+     "5": [
+      3.0,
+      3.0
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Spitdartrifle2": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 0,
+    "weapon": [
+     "CritDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_CritDamageBonus",
+    "range": {
+     "0": [
+      0.0,
+      0.0
+     ],
+     "1": [
+      0.03,
+      0.05
+     ],
+     "2": [
+      0.06,
+      0.1
+     ],
+     "3": [
+      0.1,
+      0.16
+     ],
+     "4": [
+      0.2,
+      0.31
+     ],
+     "5": [
+      0.34,
+      0.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.05,
+      1.05
+     ],
+     "2": [
+      1.05,
+      1.05
+     ],
+     "3": [
+      1.05,
+      1.05
+     ],
+     "4": [
+      1.05,
+      1.05
+     ],
+     "5": [
+      1.05,
+      1.05
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Spitdartrifle3": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.05
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.11,
+      1.15
+     ],
+     "4": [
+      1.17,
+      1.2
+     ],
+     "5": [
+      1.22,
+      1.25
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_Volume1": {
+  "min_grade": 5,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.35,
+      0.4
+     ],
+     "2": [
+      0.3,
+      0.34
+     ],
+     "3": [
+      0.25,
+      0.29
+     ],
+     "4": [
+      0.2,
+      0.24
+     ],
+     "5": [
+      0.15,
+      0.19
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_smg1": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RangedDamagePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.95
+     ],
+     "2": [
+      0.95,
+      0.95
+     ],
+     "3": [
+      0.95,
+      0.95
+     ],
+     "4": [
+      0.95,
+      0.95
+     ],
+     "5": [
+      0.95,
+      0.95
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.95,
+      0.98
+     ],
+     "2": [
+      0.9,
+      0.94
+     ],
+     "3": [
+      0.85,
+      0.89
+     ],
+     "4": [
+      0.8,
+      0.84
+     ],
+     "5": [
+      0.75,
+      0.79
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "RecoilPitchScalar",
+     "RecoilYawScalar"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RecoilBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.89
+     ],
+     "3": [
+      0.7,
+      0.78
+     ],
+     "4": [
+      0.6,
+      0.67
+     ],
+     "5": [
+      0.5,
+      0.56
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_MagazineSizeBonus_BRSMG",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.2
+     ],
+     "2": [
+      1.2,
+      1.4
+     ],
+     "3": [
+      1.4,
+      1.6
+     ],
+     "4": [
+      1.6,
+      1.8
+     ],
+     "5": [
+      1.8,
+      2.0
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainBonus_BRSMG",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.95
+     ],
+     "2": [
+      0.8,
+      0.9
+     ],
+     "3": [
+      0.75,
+      0.85
+     ],
+     "4": [
+      0.7,
+      0.8
+     ],
+     "5": [
+      0.65,
+      0.75
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_smg2": {
+  "min_grade": 3,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.98,
+      0.98
+     ],
+     "2": [
+      0.96,
+      0.96
+     ],
+     "3": [
+      0.94,
+      0.94
+     ],
+     "4": [
+      0.92,
+      0.92
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamagePenalty_Half",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.975,
+      0.975
+     ],
+     "2": [
+      0.975,
+      0.975
+     ],
+     "3": [
+      0.975,
+      0.975
+     ],
+     "4": [
+      0.975,
+      0.975
+     ],
+     "5": [
+      0.975,
+      0.975
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_smg3": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFirePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShieldDamage",
+     "AoEBaseShieldDamage",
+     "AoEMinimumShieldDamage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ShieldDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.0,
+      1.0
+     ],
+     "2": [
+      1.03,
+      1.05
+     ],
+     "3": [
+      1.06,
+      1.09
+     ],
+     "4": [
+      1.1,
+      1.14
+     ],
+     "5": [
+      1.15,
+      1.2
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "EffectiveRange",
+     "MaxRange"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.05
+     ],
+     "2": [
+      1.06,
+      1.1
+     ],
+     "3": [
+      1.11,
+      1.15
+     ],
+     "4": [
+      1.17,
+      1.2
+     ],
+     "5": [
+      1.22,
+      1.25
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_smg4": {
+  "min_grade": 4,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      1.5
+     ],
+     "2": [
+      1.5,
+      1.5
+     ],
+     "3": [
+      1.5,
+      1.5
+     ],
+     "4": [
+      1.5,
+      1.5
+     ],
+     "5": [
+      1.5,
+      1.5
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFireBonus",
+    "range": {
+     "0": [
+      1.03,
+      1.06
+     ],
+     "1": [
+      1.03,
+      1.06
+     ],
+     "2": [
+      1.07,
+      1.11
+     ],
+     "3": [
+      1.12,
+      1.18
+     ],
+     "4": [
+      1.2,
+      1.26
+     ],
+     "5": [
+      1.27,
+      1.34
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizeBonus_BRSMG_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.5,
+      2.0
+     ],
+     "2": [
+      1.75,
+      2.25
+     ],
+     "3": [
+      2.0,
+      2.5
+     ],
+     "4": [
+      2.25,
+      2.75
+     ],
+     "5": [
+      2.5,
+      3.0
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainBonus_BRSMG_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.85,
+      0.95
+     ],
+     "2": [
+      0.7,
+      0.8
+     ],
+     "3": [
+      0.55,
+      0.65
+     ],
+     "4": [
+      0.4,
+      0.5
+     ],
+     "5": [
+      0.3,
+      0.4
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ReloadTime"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_ReloadSpeedPenalty_Doubble",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.2,
+      1.2
+     ],
+     "2": [
+      1.2,
+      1.2
+     ],
+     "3": [
+      1.2,
+      1.2
+     ],
+     "4": [
+      1.2,
+      1.2
+     ],
+     "5": [
+      1.2,
+      1.2
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_smg5": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "ShotsPerSecond"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_RateOfFirePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.9,
+      0.9
+     ],
+     "2": [
+      0.9,
+      0.9
+     ],
+     "3": [
+      0.9,
+      0.9
+     ],
+     "4": [
+      0.9,
+      0.9
+     ],
+     "5": [
+      0.9,
+      0.9
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "AoEBaseDamage",
+     "AoEMinimumDamage",
+     "Damage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   }
+  ]
+ },
+ "T6_Augment_smg7": {
+  "min_grade": 2,
+  "stats": [
+   {
+    "op": 1,
+    "weapon": [
+     "Damage"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [
+     "Volume"
+    ],
+    "curve": "CV_Global_VolumeBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.7,
+      0.75
+     ],
+     "2": [
+      0.6,
+      0.65
+     ],
+     "3": [
+      0.5,
+      0.55
+     ],
+     "4": [
+      0.4,
+      0.45
+     ],
+     "5": [
+      0.3,
+      0.35
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "Damage",
+     "AoEBaseDamage",
+     "AoEMinimumDamage"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_RangedDamageBonus",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.02,
+      1.08
+     ],
+     "2": [
+      1.09,
+      1.15
+     ],
+     "3": [
+      1.18,
+      1.26
+     ],
+     "4": [
+      1.28,
+      1.44
+     ],
+     "5": [
+      1.48,
+      1.7
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "ADSBaseAccuracyOffset",
+     "HipFireBaseAccuracyOffset",
+     "ADSMaxAccuracyOffset",
+     "HipFireMaxAccuracyOffset"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_AccuracyPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.1,
+      1.1
+     ],
+     "2": [
+      1.1,
+      1.1
+     ],
+     "3": [
+      1.1,
+      1.1
+     ],
+     "4": [
+      1.1,
+      1.1
+     ],
+     "5": [
+      1.1,
+      1.1
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "MaxAmmo"
+    ],
+    "armor": [
+     "ArmorValue"
+    ],
+    "item": [],
+    "curve": "CV_Global_MagazineSizePenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      0.75,
+      0.75
+     ],
+     "2": [
+      0.75,
+      0.75
+     ],
+     "3": [
+      0.75,
+      0.75
+     ],
+     "4": [
+      0.75,
+      0.75
+     ],
+     "5": [
+      0.75,
+      0.75
+     ]
+    }
+   },
+   {
+    "op": 1,
+    "weapon": [
+     "PowerConsumptionPerShot"
+    ],
+    "armor": [],
+    "item": [],
+    "curve": "CV_Global_PowerdrainPenalty",
+    "range": {
+     "0": [
+      1.0,
+      1.0
+     ],
+     "1": [
+      1.3,
+      1.3
+     ],
+     "2": [
+      1.3,
+      1.3
+     ],
+     "3": [
+      1.3,
+      1.3
+     ],
+     "4": [
+      1.3,
+      1.3
+     ],
+     "5": [
+      1.3,
+      1.3
+     ]
+    }
+   }
+  ]
+ }
+}

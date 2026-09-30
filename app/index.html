@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DuneShark</title>
+<style>
+  :root {
+    --bg: #0c0d11; --panel: #14161c; --panel2: #1a1d25; --line: #2a2d36;
+    --gold: #c9a46a; --gold-hi: #f0cf8e; --gold-dim: #7a6340; --text: #e6e2d8; --muted: #8d8a82;
+    --water: #86ace0; --purple: #faa2fe; --ok: #7fcf9a; --bad: #ff6b5b;
+    --font: "Bahnschrift", "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); font-weight: 350; }
+  .caps { text-transform: uppercase; letter-spacing: .14em; }
+  /* borderless window chrome */
+  .winbar { display: flex; align-items: stretch; height: 30px; background: #08090c; border-bottom: 1px solid var(--line);
+            position: sticky; top: 0; z-index: 50; user-select: none; }
+  .winbar .drag { flex: 1; display: flex; align-items: center; padding-left: 14px; font-size: 11px; color: var(--gold-dim);
+                  cursor: move; }
+  .winbar button { width: 46px; font: inherit; font-size: 13px; color: var(--muted); background: transparent; border: none;
+                   cursor: pointer; }
+  .winbar button:hover { color: var(--gold-hi); background: #1a1d25; }
+  .winbar .wclose:hover { color: #fff; background: #a3342b; }
+  body.framed aside { top: 30px; }
+  /* story helper rows */
+  .steps { display: flex; flex-direction: column; gap: 6px; min-width: 320px; flex: 1; }
+  .step { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+  .step .kindlbl { width: 48px; font-size: 11px; color: var(--muted); }
+  .step .stepname { flex: 1; color: var(--text); }
+  .step .stepname small { color: var(--muted); }
+  .step button { padding: 6px 12px; font: inherit; font-size: 11px; color: var(--gold-hi); background: var(--panel2);
+                 border: 1px solid var(--gold-dim); cursor: pointer; letter-spacing: .12em; }
+  .step button:hover:not(:disabled) { border-color: var(--gold); background: #2a2317; }
+  .step button:disabled { opacity: .4; cursor: default; }
+  .wedge { position: fixed; z-index: 59; }
+  .wedge-r { top: 30px; right: 0; bottom: 18px; width: 6px; cursor: ew-resize; }
+  .wedge-b { left: 0; right: 18px; bottom: 0; height: 6px; cursor: ns-resize; }
+  .wedge:hover { background: rgba(201, 164, 106, .25); }
+  .wgrip { position: fixed; right: 0; bottom: 0; width: 18px; height: 18px; z-index: 60; cursor: nwse-resize;
+           background: linear-gradient(135deg, transparent 50%, var(--gold-dim) 50%, var(--gold-dim) 60%, transparent 60%,
+                                       transparent 70%, var(--gold-dim) 70%, var(--gold-dim) 80%, transparent 80%); }
+  header { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; padding: 18px 28px;
+           border-bottom: 1px solid var(--line); background: linear-gradient(180deg, #16181f, var(--bg)); }
+  .brand { font-size: 20px; color: var(--gold-hi); }
+  .brand small { color: var(--muted); font-size: 12px; margin-left: 10px; }
+  .gstate { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); min-width: 0; flex: 1 1 260px; }
+  .gstate #gtext { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .gdot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); flex: none; }
+  .gstate.ready .gdot { background: #6fbf73; } .gstate.ready { color: var(--text); }
+  .gstate.waiting .gdot { background: var(--gold); }
+  .gstate.blocked .gdot, .gstate.nogame .gdot { background: #d9644a; } .gstate.blocked { color: #f0a08a; }
+  .helpbtn { padding: 5px 12px; font: inherit; font-size: 12px; color: var(--gold-hi); background: transparent;
+             border: 1px solid var(--gold-dim); cursor: pointer; }
+  .helpbtn:hover { border-color: var(--gold); }
+  .status { display: flex; gap: 10px; flex-wrap: wrap; margin-left: auto; font-size: 12px; }
+  .pill { padding: 6px 12px; border: 1px solid var(--line); color: var(--muted); }
+  .pill.ok { color: var(--ok); border-color: #2f5a3d; }
+  .pill.bad { color: var(--bad); border-color: #5a2f2b; }
+  .zoom { display: flex; align-items: center; gap: 4px; font-size: 12px; }
+  .zoom button { padding: 5px 10px; font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--line);
+                 cursor: pointer; }
+  .zoom button:hover { border-color: var(--gold-dim); }
+  .zoom #zoomnum { width: 60px; padding: 5px 6px; font: inherit; color: var(--gold-hi); background: var(--bg);
+                   border: 1px solid var(--line); text-align: right; font-variant-numeric: tabular-nums; }
+  /* Spawn panel always stays on the right; when the list gets narrow the cards drop to one column. */
+  main { display: grid; grid-template-columns: minmax(0, 1fr) clamp(250px, 32vw, 360px); min-height: calc(100vh - 70px); }
+  .browse { padding: 22px 28px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+  #search { width: 100%; padding: 14px 18px; font: inherit; font-size: 17px; color: var(--text);
+            background: var(--panel); border: 1px solid var(--gold-dim); outline: none; }
+  #search:focus { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold) inset; }
+  .imports { border-left: 3px solid var(--gold); padding: 4px 0 4px 14px; }
+  .imports h2 { margin: 0 0 4px; color: var(--gold-hi); font-size: 20px; letter-spacing: .12em; }
+  .imports p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; max-width: 70ch; }
+  .imports b { color: var(--text); font-weight: 600; }
+  .imports em { color: var(--gold); }
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { padding: 7px 12px; font: inherit; font-size: 12px; color: var(--muted); background: var(--panel);
+          border: 1px solid var(--line); cursor: pointer; }
+  .chip.on { color: var(--gold-hi); border-color: var(--gold); background: #2a2317; }
+  .count { color: var(--muted); font-size: 12px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(clamp(150px, 16vw, 220px), 100%), 1fr)); gap: 8px; }
+  .item { text-align: left; padding: 12px 14px; font: inherit; color: var(--text); background: var(--panel);
+          border: 1px solid var(--line); cursor: pointer; display: flex; flex-direction: column; gap: 4px;
+          transition: border-color .12s, background .12s, box-shadow .12s; }
+  .item:hover { border-color: var(--gold-dim); }
+  .item .name { font-size: 14px; line-height: 1.3; }
+  .item .head { display: flex; align-items: center; gap: 10px; }
+  /* In-game icons are grey or white with shading; the game tints them with the card colour.
+     Same here: icon x card colour (multiply, keeps the texture), cut to the icon's shape, then brightened
+     per icon (--b from icon_lum.json: grey icons get a boost, white augment icons none). */
+  .ico { background: var(--img) center / contain no-repeat, var(--c, var(--gold)); background-blend-mode: multiply;
+         -webkit-mask: var(--img) center / contain no-repeat; mask: var(--img) center / contain no-repeat;
+         filter: brightness(var(--b, 1.6)); }
+  .item .ico { width: clamp(26px, 3vw, 44px); height: clamp(26px, 3vw, 44px); flex: none; }
+  /* Game item colours (DT_ItemCardTextStyles, loaded from game_colors.json into --st-* vars):
+     exact colour on the left bar, name brightened a little so dark hues stay readable. */
+  .item { border-left: 3px solid var(--c, var(--line)); }
+  .item .name { color: color-mix(in srgb, var(--c, var(--text)) 72%, white); }
+  .item:hover, .item.lit { border-left-color: var(--c, var(--gold)); }
+  .item .meta { font-size: 11px; color: var(--muted); word-break: break-all; }
+  .item .warn { font-size: 11px; color: var(--bad); }
+  .item.lit { border-color: var(--gold); background: linear-gradient(180deg, #2c2416, #191510);
+              box-shadow: 0 0 14px rgba(240, 207, 142, .25), 0 0 0 1px var(--gold) inset; }
+  .item.lit .name { color: var(--gold-hi); }
+  .item:focus-visible, .chip:focus-visible, button:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 2px; }
+  aside { border-left: 1px solid var(--line); background: var(--panel); padding: 22px; display: flex;
+          flex-direction: column; gap: 16px;
+          /* stays in view while the item list scrolls */
+          position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; }
+  aside h2 { margin: 0; font-size: 13px; color: var(--gold); font-weight: 400; }
+  /* selected list keeps its room (up to ~60% of the window); the item card above gives way first */
+  .tray { display: flex; flex-direction: column; gap: 6px; max-height: 60vh; overflow-y: auto; flex-shrink: 0; }
+  aside > *:not(.card) { flex-shrink: 0; }
+
+  /* game-style scrollbars: dark track, gold handle */
+  * { scrollbar-width: thin; scrollbar-color: var(--gold-dim) var(--bg); }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--gold-dim); border: 2px solid var(--bg); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+  .row select { padding: 5px 4px; font: inherit; font-size: 12px; color: var(--gold-hi); background: var(--bg);
+                border: 1px solid var(--line); }
+  .row { display: grid; grid-template-columns: 1fr auto auto auto; align-items: center; gap: 8px; padding: 8px 10px;
+         background: var(--panel2); border: 1px solid var(--line); font-size: 13px; }
+  .row input { width: 64px; padding: 5px 6px; font: inherit; color: var(--text); background: var(--bg);
+               border: 1px solid var(--line); text-align: right; font-variant-numeric: tabular-nums; }
+  .x { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 16px; }
+  .empty { color: var(--muted); font-size: 13px; }
+  .dest { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .dest button { padding: 12px; font: inherit; font-size: 12px; color: var(--muted); background: var(--panel2);
+                 border: 1px solid var(--line); cursor: pointer; }
+  .dest button.on { color: var(--water); border-color: var(--water); box-shadow: 0 0 12px rgba(134,172,224,.25); }
+  .dest small { display: block; font-size: 11px; margin-top: 4px; letter-spacing: .05em; text-transform: none; }
+  #grant { padding: 16px; font: inherit; font-size: 15px; color: #1b1408; background: var(--gold); border: none;
+           cursor: pointer; }
+  #grant:disabled { background: #3a342a; color: var(--muted); cursor: not-allowed; }
+  #msg { font-size: 13px; line-height: 1.5; min-height: 20px; }
+  #msg.ok { color: var(--ok); } #msg.bad { color: var(--bad); }
+  .note { font-size: 11px; color: var(--muted); line-height: 1.5; }
+  /* LIVE panel */
+  .live { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: 14px 28px;
+          border-bottom: 1px solid var(--line); background: var(--panel); }
+  .live h2 { margin: 0; font-size: 13px; color: var(--gold); font-weight: 400; }
+  .live .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 8px var(--ok); }
+  .tod { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tod button { padding: 8px 14px; font: inherit; font-size: 12px; color: var(--text); background: var(--panel2);
+                border: 1px solid var(--line); cursor: pointer; }
+  .tod button:hover { border-color: var(--gold-dim); }
+  .tod button.on { color: var(--gold-hi); border-color: var(--gold); background: #2a2317; }
+  .tod button:disabled { opacity: .5; cursor: wait; }
+  .slider { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--muted); }
+  .slider input { width: 220px; accent-color: var(--gold); }
+  .slider output { min-width: 48px; color: var(--gold-hi); font-variant-numeric: tabular-nums; }
+  #livemsg { font-size: 12px; color: var(--muted); }
+  #livemsg.ok { color: var(--ok); } #livemsg.bad { color: var(--bad); }
+  .field { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+  .field input, .field select { width: 96px; padding: 7px 8px; font: inherit; font-size: 12px; color: var(--text);
+    background: var(--bg); border: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+  .field select { width: auto; }
+  /* Set / Add / Award buttons in the game style (same as the live toggle buttons) */
+  .field button { padding: 7px 14px; font: inherit; font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+                  color: var(--gold-hi); background: var(--panel2); border: 1px solid var(--gold-dim); cursor: pointer; }
+  .field button:hover { border-color: var(--gold); background: #2a2317; }
+  .field button:disabled { opacity: .5; cursor: wait; }
+  .field input:focus, .field select:focus { outline: none; border-color: var(--gold); }
+  .sep { width: 1px; align-self: stretch; background: var(--line); }
+
+  /* Item card (modelled on the in-game info card: header, icon, description, stats | recipe, grade bar) */
+  .card { border: 1px solid var(--gold-dim); background: #1a1814; font-size: 13px;
+          flex-shrink: 1; min-height: 140px; overflow-y: auto; }
+  .card .top { padding: 10px 12px 8px; border-bottom: 1px solid var(--gold-dim);
+               background: linear-gradient(180deg, #211d16, #1a1814); }
+  .card .kind { font-size: 11px; color: var(--gold); letter-spacing: .08em; text-transform: uppercase; }
+  .card .title { font-size: 16px; color: color-mix(in srgb, var(--c) 72%, white); }
+  .card .art { height: 104px; display: grid; place-items: center; position: relative;
+               background: linear-gradient(180deg, #2a2340, #1a1626); }
+  .card .art .ico { width: 84px; height: 84px; }
+  .card .vol { position: absolute; left: 10px; bottom: 6px; color: var(--text); font-size: 13px;
+               border-left: 3px solid var(--water); padding-left: 5px; }
+  .card .desc { padding: 10px 12px; color: #e8d9a8; line-height: 1.45; max-height: 150px; overflow-y: auto;
+                border-bottom: 1px solid var(--line); }
+  .card .sec { padding: 8px 12px; border-bottom: 1px solid var(--line); }
+  .card .sec h3 { margin: 0 0 6px; font-size: 12px; font-weight: 400; color: var(--gold); }
+  .card .line { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; color: #e8a86a; }
+  .card .line b { font-weight: 400; color: var(--text); font-variant-numeric: tabular-nums; }
+  .card .comp { display: grid; grid-template-columns: 20px 1fr auto; gap: 8px; align-items: center; padding: 3px 0; }
+  .card .comp .ico { width: 18px; height: 18px; }
+  .card .comp b { font-weight: 400; font-variant-numeric: tabular-nums; }
+  .card .grades { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-bottom: 1px solid var(--line); }
+  .card .grades span:first-child { color: var(--text); margin-right: auto; }
+  .card .grades button { width: 26px; height: 10px; padding: 0; border: 1px solid #8a5fa8; background: transparent; cursor: pointer; }
+  .card .grades button.on { background: #b86ad8; }
+  .card .grades button.na { border-color: #3a3440; background: #141216; cursor: not-allowed; }
+  .card .grades .gnum { color: var(--text); min-width: 28px; text-align: right; font-variant-numeric: tabular-nums; }
+  .card .keys { display: flex; align-items: center; gap: 8px; padding: 8px 12px; color: var(--text); }
+  .card .keys button { padding: 3px 7px; font: inherit; font-size: 11px; color: #1b1408; background: var(--gold);
+                       border: none; cursor: pointer; }
+  .card .soon { color: var(--muted); font-style: italic; }
+</style>
+</head>
+<body>
+<!-- borderless window: own title bar (drag area + window buttons) and a resize corner -->
+<div class="winbar" id="winbar" hidden>
+  <div class="pywebview-drag-region drag caps">DuneShark</div>
+  <button id="wmin" title="Minimize" aria-label="Minimize">&#8212;</button>
+  <button id="wmax" title="Maximize / restore" aria-label="Maximize or restore">&#9633;</button>
+  <button id="wclose" class="wclose" title="Close" aria-label="Close">&#10005;</button>
+</div>
+<div class="wgrip" id="wgrip" hidden title="Drag to resize" aria-hidden="true" data-rx="1" data-ry="1"></div>
+<div class="wedge wedge-r" id="wedgeR" hidden aria-hidden="true" data-rx="1" data-ry="0"></div>
+<div class="wedge wedge-b" id="wedgeB" hidden aria-hidden="true" data-rx="0" data-ry="1"></div>
+<header>
+  <div class="brand caps">DuneShark <small>Tales of the Dark Hulud · v0.2.0</small></div>
+  <div class="gstate" id="gstate" role="status" aria-live="polite"><span class="gdot"></span><span id="gtext">Starting…</span></div>
+  <button class="helpbtn caps" id="helpBtn" title="How DuneShark works (opens the README)">Help</button>
+  <div class="zoom" role="group" aria-label="UI size">
+    <span class="caps" style="color: var(--muted)">UI size</span>
+    <button id="zoomout" aria-label="Smaller by 1%">−</button>
+    <input type="number" id="zoomnum" min="50" max="110" step="1" value="100" aria-label="UI size percent"><span>%</span>
+    <button id="zoomin" aria-label="Bigger by 1%">+</button>
+    <button id="zoomreset" title="Back to 100% (Ctrl+0)">Reset</button>
+  </div>
+  <div class="status" id="status"><span class="pill caps">Checking save…</span></div>
+</header>
+<section class="live" aria-label="Live game controls">
+  <span class="dot" aria-hidden="true"></span>
+  <h2 class="caps">Live · Time of day</h2>
+  <div class="tod" id="tod">
+    <button class="caps" data-h="6">Dawn</button>
+    <button class="caps" data-h="12">Noon</button>
+    <button class="caps" data-h="18">Dusk</button>
+    <button class="caps" data-h="22">Night</button>
+  </div>
+  <label class="slider">Hour <input type="range" id="hour" min="0" max="23.5" step="0.5" value="12"><output id="hourout">12:00</output></label>
+  <span id="livemsg" role="status"></span>
+</section>
+<section class="live" aria-label="Live story controls">
+  <span class="dot" aria-hidden="true"></span>
+  <h2 class="caps">Live · Story</h2>
+  <div class="steps">
+    <div class="step"><span class="caps kindlbl">Story</span><span id="stepStory" class="stepname">…</span>
+      <button class="caps" id="finStory" disabled>Finish step</button></div>
+    <div class="step"><span class="caps kindlbl">Side</span><span id="stepSide" class="stepname">…</span>
+      <button class="caps" id="finSide" disabled>Finish step</button></div>
+  </div>
+  <div class="tod">
+    <button class="caps" id="stepRefresh" title="Ask the game again which step you're on">Refresh</button>
+    <button class="caps" data-cmd="SkipCutscene" data-args="" data-label="Cutscene skipped">Skip cutscene</button>
+  </div>
+</section>
+<section class="live" aria-label="Live profiles">
+  <span class="dot" aria-hidden="true"></span>
+  <h2 class="caps">Live · Profiles</h2>
+  <div class="tod" id="profButtons"><span class="field">Loading…</span></div>
+  <form class="field" id="profSave" title="Save everything you have set now (speeds, vehicles, infinite stats, building, god mode) as a profile">
+    <input name="n" placeholder="Profile name" maxlength="40" aria-label="Profile name" style="width:160px">
+    <button class="caps">Save current setup</button></form>
+  <span class="field">One click switches your whole setup live. Bind one to a key: "profile:name" in app\hotkeys.json.</span>
+</section>
+<section class="live" aria-label="Live item kits">
+  <span class="dot" aria-hidden="true"></span>
+  <h2 class="caps">Live · Kits</h2>
+  <div class="tod" id="kitButtons"><span class="field">Loading…</span></div>
+  <span class="field">One click: the whole kit goes into your backpack. Edit or add kits in app\kits.json.</span>
+</section>
+<section class="live" aria-label="Live fast travel">
+  <span class="dot" aria-hidden="true"></span>
+  <h2 class="caps">Live · Fast travel</h2>
+  <label class="field"><span class="caps">To</span>
+    <select id="travelTo" aria-label="Destination"><option value="">Loading…</option></select></label>
+  <div class="tod"><button class="caps" id="travelGo">Travel</button><button class="caps" id="travelRefresh" title="Re-read your unlocked destinations">Refresh</button></div>
+  <span class="field">Only trading posts you have visited and your own bases. You land where the game would respawn you.</span>
+</section>
+<section class="live" aria-label="Live building controls" id="bldPanel">
+  <span class="dot" aria-hidden="true"></span>
+  <h2 class="caps">Live · Building</h2>
+  <div class="tod">
+    <span class="field caps">Instant build</span>
+    <button class="caps" data-bld="instant" data-val="1">On</button>
+    <button class="caps" data-bld="instant" data-val="0">Off</button>
+  </div>
+  <span class="sep"></span>
+  <form class="field bldform" data-bld="staking_time">
+    <span class="caps">Staking time</span><input type="number" name="v" min="0.5" max="600" step="0.5" value="60" aria-label="Staking time in seconds"><span>s</span>
+    <button class="caps">Set</button></form>
+  <form class="field bldform" data-bld="horizontal">
+    <span class="caps">Stake extensions</span><input type="number" name="v" min="1" max="100" value="6" aria-label="Horizontal stake extensions">
+    <button class="caps">Set</button></form>
+  <form class="field bldform" data-bld="mult">
+    <span class="caps">Limit</span>
+    <select name="cat" aria-label="Building category">
+      <option value="BuildingPiece">Building pieces</option><option value="Light">Lights</option>
+      <option value="Decoration">Decoration</option><option value="Storage">Storage</option>
+      <option value="Production">Production</option><option value="Doors">Doors</option>
+    </select>
+    <span>×</span><input type="number" name="v" min="0.5" max="20" step="0.1" value="1" aria-label="Limit multiplier">
+    <button class="caps">Set</button></form>
+  <form class="field bldform" data-bld="height">
+    <span class="caps">Height</span><span>×</span><input type="number" name="v" min="1" max="5" step="0.1" value="1" aria-label="Building height multiplier (up and down)">
+    <button class="caps">Set</button></form>
+  <label class="field"><input type="checkbox" id="bldAuto" checked> Re-apply after game restart</label>
+  <span class="field" id="bldNow">…</span>
+</section>
+<section class="live" aria-label="Live player controls">
+  <span class="dot" aria-hidden="true"></span>
+  <h2 class="caps">Live · Player</h2>
+  <div class="tod">
+    <span class="field caps">God mode</span>
+    <button class="caps" data-cmd="SetGodMode" data-args="1" data-label="God mode on">On</button>
+    <button class="caps" data-cmd="SetGodMode" data-args="0" data-label="God mode off">Off</button>
+  </div>
+  <span class="sep"></span>
+  <div class="tod">
+    <span class="field caps">Worms ignore me</span>
+    <button class="caps" data-cmd="SandwormSetCanBeTargeted" data-args="false" data-label="Worms ignore you">On</button>
+    <button class="caps" data-cmd="SandwormSetCanBeTargeted" data-args="true" data-label="Worms see you again">Off</button>
+  </div>
+  <span class="sep"></span>
+  <div class="tod">
+    <span class="field caps">Refill</span>
+    <button class="caps" data-cmd="RefillHealth" data-args="" data-label="Health refilled">Health</button>
+    <button class="caps" data-cmd="RefillWater" data-args="" data-label="Water refilled">Water</button>
+  </div>
+  <span class="sep"></span>
+  <div class="tod">
+    <button class="caps" data-cmd="Unstuck" data-args="true 0" data-label="Moved to the nearest safe spot"
+            title="Stuck under the map or inside a rock? Moves you to the nearest safe spot right where you are. No death, no item loss.">Unstuck</button>
+  </div>
+  <span class="sep"></span>
+  <form class="field moveform" data-move="run" title="Running and sprinting speed (0.5 to 3)">
+    <span class="caps">Run speed</span><span>×</span><input type="number" name="v" min="0.5" max="3" step="0.1" value="1" aria-label="Run speed multiplier">
+    <button class="caps">Set</button></form>
+  <form class="field moveform" data-move="suspensor" title="Hovering speed with a suspensor belt (0.2 slow detail work to 10)">
+    <span class="caps">Suspensor speed</span><span>×</span><input type="number" name="v" min="0.2" max="10" step="0.1" value="1" aria-label="Suspensor speed multiplier">
+    <button class="caps">Set</button></form>
+  <span class="sep"></span>
+  <div class="tod" title="Abilities recharge instantly: shield, dash, grenades, Sardaukar pull, bleed strike... Off puts the normal cooldowns back.">
+    <button class="caps" id="cdBtn" aria-pressed="false">Instant cooldowns</button>
+  </div>
+  <div class="tod" id="keepFull" title="Kept at maximum 10 times a second. Power also runs your shield and suspensor belt.">
+    <span class="field caps">Infinite</span>
+    <button class="caps" data-keep="power">Power</button>
+    <button class="caps" data-keep="stamina">Stamina</button>
+    <button class="caps" data-keep="water">Water</button>
+  </div>
+  <span class="sep"></span>
+  <form class="field" data-cmd="SkillsSetUnspentSkillPoints" data-label="Skill points set">
+    <span class="caps">Skill points</span><input type="number" name="a" min="0" max="10000" value="100" aria-label="Skill points">
+    <button class="caps">Set</button></form>
+  <form class="field" data-cmd="AwardXP" data-label="XP awarded">
+    <span class="caps">XP</span>
+    <select name="area" aria-label="XP type"><option>Combat</option><option>Science</option><option>Exploration</option></select>
+    <input type="number" name="a" min="1" max="1000000" value="10000" aria-label="XP amount">
+    <button class="caps">Award</button></form>
+  <form class="field" data-cmd="AddXPToSpecializationTrack" data-label="Specialization XP granted">
+    <span class="caps">Specialization XP</span>
+    <select name="area" aria-label="Specialization track">
+      <option value="1">Crafting</option><option value="2">Gathering</option><option value="3">Exploration</option>
+      <option value="4">Combat</option><option value="5">Sabotage</option>
+    </select>
+    <input type="number" name="a" min="1" max="1000000" value="1000" aria-label="XP amount">
+    <button class="caps">Grant</button></form>
+  <form class="field" data-cmd="AddSolarisToAccount" data-label="Solaris added">
+    <span class="caps">Solaris</span><input type="number" name="a" min="1" max="100000000" value="100000" aria-label="Solaris">
+    <button class="caps">Add</button></form>
+  <form class="field" data-cmd="SetBackpackSize" data-label="Backpack size set">
+    <span class="caps">Backpack slots</span><input type="number" name="a" min="35" max="1000" value="200" aria-label="Backpack slots">
+    <button class="caps">Set</button></form>
+</section>
+<section class="live" aria-label="Live vehicle controls">
+  <span class="dot" aria-hidden="true"></span>
+  <h2 class="caps">Live · Vehicles</h2>
+  <span class="field">Speed per vehicle type. Thopter boost stacks on top of the thopter speeds.</span>
+  <form class="field spdform" data-spd="bike" title="Sandbike top speed (0.5 to 3). Applies to every sandbike nearby, including ones you summon later.">
+    <span class="caps">Sandbike</span><span>×</span><input type="number" name="v" min="0.5" max="3" step="0.1" value="1" aria-label="Sandbike speed multiplier">
+    <button class="caps">Set</button></form>
+  <form class="field spdform" data-spd="buggy" title="Buggy top speed (0.5 to 3). Applies to every buggy nearby, including ones you summon later.">
+    <span class="caps">Buggy</span><span>×</span><input type="number" name="v" min="0.5" max="3" step="0.1" value="1" aria-label="Buggy speed multiplier">
+    <button class="caps">Set</button></form>
+  <form class="field spdform" data-spd="crawler" title="Sand crawler top speed (0.5 to 3). Applies to every sand crawler nearby, including ones you summon later.">
+    <span class="caps">Sand crawler</span><span>×</span><input type="number" name="v" min="0.5" max="3" step="0.1" value="1" aria-label="Sand crawler speed multiplier">
+    <button class="caps">Set</button></form>
+  <form class="field spdform" data-spd="light" title="Light thopter top speed (0.5 to 3). Applies to every light thopter nearby, including ones you summon later.">
+    <span class="caps">Light thopter</span><span>×</span><input type="number" name="v" min="0.5" max="3" step="0.1" value="1" aria-label="Light thopter speed multiplier">
+    <button class="caps">Set</button></form>
+  <form class="field spdform" data-spd="medium" title="Assault thopter top speed (0.5 to 3). Applies to every assault thopter nearby, including ones you summon later.">
+    <span class="caps">Assault thopter</span><span>×</span><input type="number" name="v" min="0.5" max="3" step="0.1" value="1" aria-label="Assault thopter speed multiplier">
+    <button class="caps">Set</button></form>
+  <form class="field spdform" data-spd="transport" title="Carrier thopter top speed (0.5 to 3). Applies to every carrier thopter nearby, including ones you summon later.">
+    <span class="caps">Carrier thopter</span><span>×</span><input type="number" name="v" min="0.5" max="3" step="0.1" value="1" aria-label="Carrier thopter speed multiplier">
+    <button class="caps">Set</button></form>
+  <span class="sep"></span>
+  <form class="field vehform" data-veh="height" title="Ornithopter flight ceiling (0.5 to 3). Stock light ornithopter: engines fade at 750 m, hard ceiling 900 m.">
+    <span class="caps">Thopter height</span><span>×</span><input type="number" name="v" min="0.5" max="3" step="0.1" value="1" aria-label="Ornithopter flight height multiplier">
+    <button class="caps">Set</button></form>
+  <form class="field vehform" data-veh="boost" title="Ornithopter boost module speed only (0.5 to 3). Normal flying speed is not changed.">
+    <span class="caps">Thopter boost</span><span>×</span><input type="number" name="v" min="0.5" max="3" step="0.1" value="1" aria-label="Ornithopter boost multiplier">
+    <button class="caps">Set</button></form>
+  <div class="tod" title="Off = vanilla: in thin air the engine draws up to 250x power: fuel drains, it overheats, a warning shows. On = normal fuel and heat right up to the ceiling. Overheating from boosting stays vanilla.">
+    <button class="caps" id="noBurn" aria-pressed="false">No thin-air burn &amp; heat</button>
+    <span class="field" id="thinAir"></span>
+  </div>
+</section>
+<main>
+  <section class="browse">
+    <header class="imports">
+      <h2 class="caps">Muad'Dib Imports</h2>
+      <p>New to Arrakis and here to break the CHOAM monopoly. For a limited time, every new customer of our import
+         network gets <b>free delivery</b> of all the supplies they need, straight to the backpack, no questions asked.
+         <em>The spice must flow. So must the ingots.</em></p>
+    </header>
+    <input id="search" type="search" placeholder="Search items: sword, stillsuit, ornithopter, spice…" autocomplete="off" autofocus>
+    <div class="chips" id="chips"></div>
+    <label class="note"><input type="checkbox" id="future"> Show disabled and retired items (the game marks these as not in use)</label>
+    <div class="count" id="count"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+  <aside>
+    <section id="card" class="card" hidden aria-live="polite"></section>
+    <h2 class="caps">Your order</h2>
+    <div class="tray" id="tray"><div class="empty">Click items on the left to light them up.</div></div>
+    <h2 class="caps">Send to</h2>
+    <div class="dest">
+      <button class="caps on" data-to="bank">Bank<small id="bankSlots"></small></button>
+      <button class="caps" data-to="backpack">Backpack<small id="packSlots"></small></button>
+    </div>
+    <button id="grant" class="caps" disabled>Grant</button>
+    <form class="field" id="kitSave" title="Save the Selected list (with amounts and grades) as your own kit">
+      <input name="n" placeholder="Kit name" maxlength="40" aria-label="Kit name" style="flex:1; width:auto">
+      <button class="caps">Save as kit</button></form>
+    <div id="msg"></div>
+    <p class="note" id="liveNote" style="display:none">Dune is running: Muad'Dib Imports delivers straight into your backpack, live. Make room first.</p>
+    <p class="note">Dune closed: items are written into the save (bank or backpack), with a backup every time.
+      Future-content items are hidden unless you tick the box above the list.</p>
+  </aside>
+</main>
+<script>
+let ITEMS = [], group = "All", dest = "bank", gameRunning = true, showFuture = false;
+const picked = new Map();   // id -> qty
+const grades = new Map();   // id -> grade 0-5 (sent as AddItemToInventory InQuality)
+const GRADED = new Set(["Weapons", "Schematics", "Clothing", "Augments", "Equipment", "Vehicles"]);
+const $ = s => document.querySelector(s);
+
+async function loadStatus() {
+  try {
+    const s = await (await fetch("/api/status")).json();
+    gameRunning = s.game_running;
+    $("#status").innerHTML = [
+      `<span class="pill caps ${s.game_running ? "bad" : "ok"}">${s.game_running ? "Dune is running" : "Dune closed"}</span>`,
+      `<span class="pill caps ${s.save ? "ok" : "bad"}">${s.character ? "Save: " + s.character : "No save found"}</span>`,
+      s.save_time ? `<span class="pill caps">Saved ${s.save_time}</span>` : ""
+    ].join("");
+    if (s.slots.bank) $("#bankSlots").textContent = `${s.slots.bank.used} / ${s.slots.bank.max} used`;
+    if (s.slots.backpack) $("#packSlots").textContent = `${s.slots.backpack.used} / ${s.slots.backpack.max} used`;
+  } catch { $("#status").innerHTML = `<span class="pill bad caps">Console offline</span>`; }
+  updateGrant();
+}
+
+function chips() {
+  const groups = ["All", ...[...new Set(ITEMS.map(i => i.group))].sort()];
+  $("#chips").innerHTML = groups.map(g =>
+    `<button class="chip caps ${g === group ? "on" : ""}" data-g="${g}">${g}</button>`).join("");
+}
+
+function render() {
+  const q = $("#search").value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const list = ITEMS.filter(i => (showFuture || i.works) && (group === "All" || i.group === group) &&
+    q.every(w => (i.name + " " + i.id).toLowerCase().includes(w)));
+  $("#count").textContent = `${list.length} items` + (list.length > 300 ? " — showing the first 300, type to narrow down" : "");
+  $("#grid").innerHTML = list.slice(0, 300).map(i => `
+    <button class="item ${picked.has(i.id) ? "lit" : ""}" data-id="${i.id}" data-tier="${i.tier ?? ""}" data-rarity="${i.rarity ?? ""}" style="--c: var(--st-${i.style || "Default"})">
+      <span class="head">${i.iconOk ? `<span class="ico" style="--img: url('/icon${i.icon}'); --b: ${i.iconB}" aria-hidden="true"></span>` : ""}<span class="name">${i.name}</span></span>
+      <span class="meta">${[i.group, i.tier != null ? "T" + i.tier : "", i.rarity, i.faction, i.unique ? "Unique" : ""].filter(Boolean).join(" · ")}</span>
+      <span class="meta">${i.id}</span>
+      ${i.works ? "" : `<span class="warn">Disabled or retired in the game — may not work</span>`}
+    </button>`).join("");
+}
+
+function renderTray() {
+  if (!picked.size) { $("#tray").innerHTML = `<div class="empty">Click items on the left to light them up.</div>`; }
+  else $("#tray").innerHTML = [...picked].map(([id, qty]) => {
+    const i = ITEMS.find(x => x.id === id);
+    const avail = window.availGrades ? availGrades(id) : [0, 1, 2, 3, 4, 5];   // only grades the game offers
+    let g = grades.get(id) || 0;
+    if (GRADED.has(i.group) && !avail.includes(g)) { g = avail[0]; grades.set(id, g); }
+    const gradeSel = GRADED.has(i.group) && avail.length > 1
+      ? `<select data-grade="${id}" aria-label="Grade" title="Grade (live spawn only)">${avail.map(n =>
+          `<option value="${n}" ${n === g ? "selected" : ""}>G${n}</option>`).join("")}</select>`
+      : `<span></span>`;
+    return `<div class="row"><span style="color: color-mix(in srgb, var(--st-${i.style || "Default"}) 72%, white)">${i.name}</span>
+      ${gradeSel}
+      <input type="number" min="1" max="500" value="${qty}" data-qty="${id}" aria-label="Quantity">
+      <button class="x" data-rm="${id}" aria-label="Remove">✕</button></div>`;
+  }).join("");
+  updateGrant();
+}
+
+function updateGrant() {
+  const n = [...picked.values()].reduce((a, b) => a + b, 0);
+  $("#grant").disabled = !picked.size;
+  $("#grant").textContent = gameRunning ? (picked.size ? `Deliver ${n} now · free` : "Deliver · free")
+                                        : (picked.size ? `Grant ${n} to ${dest}` : "Grant");
+  document.querySelector(".dest").style.display = gameRunning ? "none" : "";
+  $("#liveNote").style.display = gameRunning ? "" : "none";
+}
+
+document.addEventListener("click", e => {
+  const it = e.target.closest(".item"), ch = e.target.closest(".chip"), rm = e.target.closest("[data-rm]"),
+        de = e.target.closest(".dest button");
+  if (it) { picked.has(it.dataset.id) ? picked.delete(it.dataset.id) : picked.set(it.dataset.id, 1); it.classList.toggle("lit"); renderTray(); }
+  if (ch) { group = ch.dataset.g; chips(); render(); }
+  if (rm) { picked.delete(rm.dataset.rm); renderTray(); render(); }
+  if (de) { dest = de.dataset.to; document.querySelectorAll(".dest button").forEach(b => b.classList.toggle("on", b === de)); updateGrant(); }
+});
+document.addEventListener("input", e => {
+  if (e.target.id === "search") render();
+  if (e.target.id === "future") { showFuture = e.target.checked; render(); }
+  if (e.target.dataset.grade) grades.set(e.target.dataset.grade, +e.target.value);
+  if (e.target.dataset.qty) { picked.set(e.target.dataset.qty, Math.max(1, Math.min(500, +e.target.value || 1))); updateGrant(); }
+});
+
+$("#grant").addEventListener("click", async () => {
+  const msg = $("#msg"); msg.className = ""; msg.textContent = gameRunning ? "Spawning…" : "Granting…";
+  $("#grant").disabled = true;
+  const res = await fetch("/api/grant", { method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ to: dest, items: [...picked].map(([id, qty]) => ({ id, qty, grade: grades.get(id) || 0 })) }) });
+  const out = await res.json();
+  if (out.error) { msg.className = "bad"; msg.textContent = out.error; }
+  else if (out.live) {
+    msg.className = out.failed.length ? "bad" : "ok";
+    msg.textContent = `Spawned ${out.granted} into your backpack.` + (out.failed.length ? " Failed: " + out.failed.join("; ") : "");
+    if (!out.failed.length) { picked.clear(); renderTray(); render(); }
+  }
+  else { msg.className = "ok"; msg.textContent = `Granted ${out.granted} items to your ${out.kind}. Backup saved. Start Dune to see them.`;
+         picked.clear(); renderTray(); render(); }
+  loadStatus();
+});
+
+(async () => {
+  // Game palette -> CSS vars (a future Personalize option can override these the same way)
+  try {
+    const pal = await (await fetch("/game_colors.json")).json();
+    for (const [k, v] of Object.entries(pal)) if (!k.startsWith("_")) document.documentElement.style.setProperty("--st-" + k, v);
+  } catch {}
+  ITEMS = await (await fetch("/items.json")).json();
+  chips(); render(); loadStatus(); setInterval(loadStatus, 5000);
+})();
+</script>
+<script>
+(() => {
+  const msg = document.getElementById('livemsg');
+  const btns = [...document.querySelectorAll('#tod button')];
+  const allLive = () => [...document.querySelectorAll('.live button')];
+  const hour = document.getElementById('hour'), out = document.getElementById('hourout');
+  const fmt = h => String(Math.floor(h)).padStart(2, '0') + ':' + (h % 1 ? '30' : '00');
+  async function live(cmd, args, label) {
+    allLive().forEach(b => b.disabled = true);
+    msg.className = ''; msg.textContent = 'Sending ' + label + '…';
+    try {
+      const r = await fetch('/api/live', {method: 'POST', headers: {'Content-Type': 'application/json'},
+                                          body: JSON.stringify({cmd, args})});
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.error || r.status);
+      msg.className = 'ok'; msg.textContent = label + ' ✓';
+      return true;
+    } catch (e) {
+      msg.className = 'bad'; msg.textContent = String(e.message || e);
+      return false;
+    } finally { allLive().forEach(b => b.disabled = false); }
+  }
+  async function setHour(h) {
+    hour.value = h; out.textContent = fmt(h);
+    if (await live('SetTimeOfDay', [h], 'Time ' + fmt(h)))
+      btns.forEach(b => b.classList.toggle('on', Number(b.dataset.h) === Number(h)));
+  }
+  btns.forEach(b => b.addEventListener('click', () => setHour(Number(b.dataset.h))));
+  hour.addEventListener('input', () => out.textContent = fmt(Number(hour.value)));
+  hour.addEventListener('change', () => setHour(Number(hour.value)));
+  document.querySelectorAll('.live button[data-cmd]').forEach(b => b.addEventListener('click', () => {
+    // data-confirm buttons need a second click within 4 s (story progress can't be undone from here)
+    if (b.dataset.confirm && !b.dataset.armed) {
+      b.dataset.armed = "1"; const txt = b.textContent; b.textContent = "Sure? Click again";
+      setTimeout(() => { delete b.dataset.armed; b.textContent = txt; }, 4000);
+      return;
+    }
+    delete b.dataset.armed;
+    live(b.dataset.cmd, b.dataset.args.split(' '), b.dataset.label);
+  }));
+  document.querySelectorAll('.live form[data-cmd]').forEach(f => f.addEventListener('submit', e => {
+    e.preventDefault();
+    const a = f.elements.a.value, area = f.elements.area;
+    live(f.dataset.cmd, area ? [area.value, a] : [a], f.dataset.label + ' (' + (area ? area.selectedOptions[0].text + ' ' : '') + a + ')');
+  }));
+})();
+</script>
+<script>
+// Item card: hover an item to see it; L.Alt (or the button) switches Stats <-> Recipe like in-game.
+(() => {
+  let DETAILS = null, cur = null, view = "stats";
+  const cardGrade = new Map();                     // id -> grade shown on the card
+  fetch("/item_details.json").then(r => r.json()).then(d => { DETAILS = d; if (cur) show(cur); }).catch(() => {});
+  let AUG = {};                                     // augment stat ranges per grade (dune_stats.py)
+  fetch("/augment_stats.json").then(r => r.json()).then(d => { AUG = d; if (cur) show(cur); }).catch(() => {});
+  // in-game wording for stat ids + whether lower is better (costs, recoil, spread, reload...)
+  const STAT = {
+    ArmorValue: "Armor Value", Damage: "Damage", Volume: "Volume", AoEBaseDamage: "Area Damage",
+    AoEMinimumDamage: "Minimum Area Damage", ADSBaseAccuracyOffset: "Aimed Spread", HipFireBaseAccuracyOffset: "Hip Fire Spread",
+    ADSMaxAccuracyOffset: "Aimed Max Spread", HipFireMaxAccuracyOffset: "Hip Fire Max Spread",
+    PowerConsumptionPerShot: "Power per Shot", RecoilPitchScalar: "Vertical Recoil", RecoilYawScalar: "Horizontal Recoil",
+    ShotsPerSecond: "Fire Rate", MaxAmmo: "Magazine Size", ReloadTime: "Reload Time", EffectiveRange: "Effective Range",
+    MaxRange: "Max Range", AoEMinimumShieldDamage: "Minimum Area Shield Damage", ShieldDamage: "Shield Damage",
+    AoEBaseShieldDamage: "Area Shield Damage", CritDamage: "Critical Damage", AttackStaminaBaseCost: "Attack Stamina Cost",
+    EnergyDamageMitigation: "Energy Mitigation", PoisonDamageMitigation: "Poison Mitigation", DartDamageMitigation: "Dart Mitigation",
+    HeavyDartDamageMitigation: "Heavy Dart Mitigation", HeatDamageMitigation: "Heat Mitigation", MeleeDamageMitigation: "Blade Mitigation",
+    BlockStaminaCost: "Block Stamina Cost", ScattergunOffsetDistance: "Pellet Spread", PhysicalDamageMitigation: "Physical Mitigation",
+    ColdProtectionValue: "Cold Protection", ColdDamageMitigation: "Cold Mitigation", RadiationDamageMitigation: "Radiation Mitigation",
+    DashStaminaCost: "Dash Stamina Cost", AoEInnerRadius: "Inner Blast Radius", AoEOuterRadius: "Outer Blast Radius",
+    DehydrationCaptureModifier: "Hydration Capture", DefeatDurabilityLoss: "Durability Loss on Defeat", FireDoT: "Burn Damage",
+    PoisonDamage: "Poison Damage",
+  };
+  const LOWER_BETTER = /Cost|Recoil|Spread|AccuracyOffset|ReloadTime|PowerConsumption|Volume|DurabilityLoss|OffsetDistance/;
+  let ISTATS = null;                                // weapon / armor base stats + grade curves (dune_item_stats.py)
+  fetch("/item_stats.json").then(r => r.json()).then(d => { ISTATS = d; if (cur) show(cur); }).catch(() => {});
+  // weapon + armor stat lines, scaled by grade like the game (damage / shield damage / armor value curves)
+  function itemStatLines(it, grade) {
+    if (!ISTATS) return "";
+    const e = ISTATS.items[it.id] || ISTATS.items[it.id.replace(/_Schematic$/, "")];
+    if (!e) return "";
+    const G = ISTATS.grade, D = ISTATS.display, s = e.stats;
+    const q = Math.max(0, Math.min(5, grade | 0));
+    const rows = [];
+    const add = (label, value, unit = "") => rows.push(`<div class="line stat"><span>${label}</span><b>${value}${unit}</b></div>`);
+    const n = (v, d = 1) => (+v).toLocaleString(undefined, { maximumFractionDigits: d });
+    const dn = (id, fallback) => (D[id] && D[id].name) || fallback || statName(id);
+    if (e.kind === "ranged") {
+      add(dn("Damage"), n(s.Damage * G.damage[q]));
+      if (s.ShieldDamage) add(dn("ShieldDamage"), n(s.ShieldDamage * G.shield[q]));
+      if (s.CritDamage) add(dn("CritDamage"), "+" + n(s.CritDamage * 100, 0), "%");
+      if (s.FireRate) add(dn("ShotsPerSecond"), n(s.FireRate, 2), " / s");
+      if (s.MaxAmmo) add(dn("MaxAmmo"), n(s.MaxAmmo, 0));
+      if (s.ReloadTime) add(dn("ReloadTime"), n(s.ReloadTime, 2), " s");
+      if (s.EffectiveRange) add(dn("EffectiveRange"), n(s.EffectiveRange / 100, 0), " m");
+      if (s.MaxRange) add(dn("MaxRange"), n(s.MaxRange / 100, 0), " m");
+      if (s.PowerConsumptionPerShot) add(dn("PowerConsumptionPerShot"), n(s.PowerConsumptionPerShot));
+      if (s.HipFireBaseAccuracyOffset) add("Hip Fire Spread", n(s.HipFireBaseAccuracyOffset, 2), "°");
+      if (s.ADSBaseAccuracyOffset) add("Aimed Spread", n(s.ADSBaseAccuracyOffset, 2), "°");
+    } else if (e.kind === "melee") {
+      add(dn("Damage"), n(s.MeleeDamage * G.damage[q]));
+      if (s.ShieldDamage) add(dn("ShieldDamage"), n(s.ShieldDamage * G.shield[q]));
+      if (s.AttackStaminaBaseCost) add(dn("AttackStaminaBaseCost"), n(s.AttackStaminaBaseCost));
+      if (s.BlockStaminaCost) add(dn("BlockStaminaCost"), n(s.BlockStaminaCost));
+    } else {
+      if (s.ArmorValue) add("Armor Value", n(s.ArmorValue * G.armor[q], 0));
+      for (const [k, v] of Object.entries(s))
+        if (/Mitigation$/.test(k) && !/^Dehydration/.test(k)) add(statName(k), (v > 0 ? "+" : "") + n(v * 100), "%");
+    }
+    // equip effects (worm threat, dash stamina, hydration capture, power, cooldowns...), like the in-game card
+    for (const m of e.extras || []) {
+      const label = EXTRA[m.attr] || statName(m.attr.replace(/^CooldownScalar_(\w+)/, "$1 Cooldown").replace(/Scalar$|Modifier$|Base$/, ""));
+      let txt, delta;
+      if (m.op === 1) { delta = (m.value - 1) * 100; txt = (delta > 0 ? "+" : "") + n(delta) + "%"; }
+      else if (m.op === 0) { const pct = Math.abs(m.value) <= 1.5; delta = m.value; txt = (m.value > 0 ? "+" : "") + (pct ? n(m.value * 100) + "%" : n(m.value, 2)); }
+      else if (m.op === 2) { delta = (1 / m.value - 1) * 100; txt = "÷" + n(m.value, 2); }
+      else { delta = 0; txt = n(m.value, 2); }
+      if (!delta && m.op !== 3) continue;
+      const good = m.op === 3 ? null : (LOWER_BETTER_EXTRA.test(m.attr) ? delta < 0 : delta > 0);
+      rows.push(`<div class="line stat"><span>${label}</span><b${good === null ? "" : ` style="color:${good ? "#7fcf6a" : "#ff7a6a"}"`}>${txt}</b></div>`);
+    }
+    return rows.length ? `<div class="sec"><h3>Stats${GRADED.has(it.group) ? " (grade " + q + ")" : ""}</h3>${rows.join("")}</div>` : "";
+  }
+  const EXTRA = {
+    SandwormMovementThreatScalar: "Worm Threat", DashStaminaCost: "Dash Stamina Cost",
+    ClothingDehydrationCaptureTrainingModifier: "Hydration Capture", MaxPower: "Max Power", PowerPackRegenRateBase: "Power Regeneration",
+    PowerPackRegenBonus: "Power Regeneration Bonus", PowerPackRegenDelay: "Power Regeneration Delay", PowerEfficiency: "Power Efficiency",
+    ShieldActivationDelay: "Shield Activation Delay", ShieldReactivationAfterADSDelay: "Shield Reactivation after Aiming",
+    ShieldDamageMitigationFactor: "Shield Mitigation", ShieldCompromisedIntegrityDuration: "Shield Recovery Time",
+    PowerSuspensorUsage: "Suspensor Power Use", StaminaUsageBonus: "Stamina Use", DewReapingYieldModifier: "Dew Reaping Yield",
+    DartMitigation: "Dart Mitigation", HeavyDartMitigation: "Heavy Dart Mitigation", MeleeMitigation: "Blade Mitigation",
+    PhysicalMitigation: "Physical Mitigation", EnergyMitigation: "Energy Mitigation", HeatExhaustionBuildupRate: "Heat Exhaustion Buildup",
+    HandheldScannerRangeBonus: "Scanner Range", DetectableRateMultiplier: "Detection Rate", ClimbingStaminaScalar: "Climbing Stamina Use",
+    MeleeDamageBonus: "Melee Damage",
+  };
+  const LOWER_BETTER_EXTRA = /Cost|Threat|Delay|Buildup|Cooldown|Detectable|Climbing|Usage|Duration|SuspensorUsage/;
+  const statName = id => STAT[id] || id.replace(/([a-z])([A-Z])/g, "$1 $2");
+  // one line per stat: range at this grade, green when it helps, red when it hurts (like the in-game card)
+  function augmentLines(it, grade) {
+    const a = AUG[it.id] || AUG[it.id.replace(/_Schematic$/, "")];
+    if (!a) return "";
+    const armor = it.style === "AugmentArmor";
+    const rows = a.stats.map(s => {
+      const ids = (armor ? s.armor : s.weapon).length ? (armor ? s.armor : s.weapon) : (s.item.length ? s.item : s.weapon.concat(s.armor));
+      if (!ids.length) return "";
+      const [lo, hi] = s.range[String(grade)] || s.range["5"];
+      const pct = s.op === 1;                          // 1 = multiplier -> show as %
+      const fmt = v => pct ? (v - 1) * 100 : v;
+      const a1 = fmt(lo), a2 = fmt(hi);
+      if (Math.abs(a1) < 1e-6 && Math.abs(a2) < 1e-6) return "";
+      const show = v => (v > 0 ? "+" : "") + (pct ? v.toFixed(Math.abs(v) < 10 ? 1 : 0) + "%" : +v.toFixed(2));
+      const txt = Math.abs(a1 - a2) < 1e-6 ? show(a1) : `${show(a1)} to ${show(a2)}`;
+      const good = LOWER_BETTER.test(ids[0]) ? (a1 + a2) < 0 : (a1 + a2) > 0;
+      return `<div class="line stat"><span>${ids.map(statName).join(" / ")}</span><b style="color:${good ? "#7fcf6a" : "#ff7a6a"}">${txt}</b></div>`;
+    }).join("");
+    return rows ? `<div class="sec"><h3>Changes (grade ${grade})</h3>${rows}<div class="soon">Crafted augments roll a value inside each range.</div></div>` : "";
+  }
+  const byId = id => ITEMS.find(x => x.id === id);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  // game rich text: <Unique>Unique</> -> coloured span
+  const rich = s => esc(s).replace(/&lt;(\w+)&gt;(.*?)&lt;\/&gt;/g,
+    (m, tag, txt) => `<span style="color: color-mix(in srgb, var(--st-${tag}, var(--gold-hi)) 80%, white)">${txt}</span>`);
+  const recipesFor = id => DETAILS && (DETAILS._recipes[id] || DETAILS._recipes[id.replace(/_Schematic$/, "")]);
+  // Grades the game really offers: recipe slots filled with the 9999 placeholder don't exist (augments start at G2 etc.)
+  window.availGrades = id => {
+    const recs = recipesFor(id);
+    if (!recs || !recs.length || !recs[0].grades.length) return [0, 1, 2, 3, 4, 5];
+    const ok = recs[0].grades.map((q, n) => Object.values(q.items).some(v => v >= 9999) ? -1 : n).filter(n => n >= 0);
+    return ok.length ? ok : [0];
+  };
+  const icon = (it, cls = "ico") => it && it.iconOk ? `<span class="${cls}" style="--img: url('/icon${it.icon}'); --b: ${it.iconB}"></span>` : `<span></span>`;
+
+  function show(id) {
+    cur = id;
+    const it = byId(id), card = document.getElementById("card");
+    if (!it) return;
+    const det = DETAILS && DETAILS[id] || {};
+    const recs = recipesFor(id);
+    const hasRecipe = !!(recs && recs.length && recs[0].grades.length);
+    if (view === "recipe" && !hasRecipe) view = "stats";
+    const maxG = hasRecipe ? recs[0].grades.length - 1 : 5;
+    const avail = availGrades(id);                 // e.g. augments: [2,3,4,5]
+    let g = Math.min(cardGrade.has(id) ? cardGrade.get(id) : (grades.get(id) || 0), maxG);
+    if (!avail.includes(g)) g = avail[0];
+    const kind = [it.group, it.tier != null ? "T" + it.tier : "", it.faction, it.unique ? "Unique" : ""].filter(Boolean).join(" - ");
+    let body = "";
+    if (view === "recipe") {
+      const r = recs[0], q = r.grades[g];
+      body += `<div class="sec"><h3>Components</h3>` +
+        (q.water ? `<div class="comp"><span></span><span>Water</span><b>${q.water.toLocaleString()}</b></div>` : "") +
+        Object.entries(q.items).map(([cid, n]) => {
+          const c = byId(cid);
+          return `<div class="comp" style="--c: var(--st-${c ? c.style : "Default"})">${icon(c)}<span>${esc(c ? c.name : cid)}</span><b>${n}</b></div>`;
+        }).join("") + `</div>` +
+        `<div class="sec"><h3>Works with</h3>${r.fabricators.map(f => `<div>${esc(DETAILS._fabricators[f] || f)}</div>`).join("") || "<div>—</div>"}` +
+        (r.time ? `<div class="line">Crafting time <b>${r.time}s</b></div>` : "") + `</div>`;
+    } else {
+      const aug = augmentLines(it, g), base = itemStatLines(it, g);
+      body += aug + base + `<div class="sec">` +
+        (det.volume ? `<div class="line">Volume <b>${det.volume}V</b></div>` : "") +
+        (it.tier != null ? `<div class="line">Tier <b>${it.tier}</b></div>` : "") + `</div>`;
+    }
+    const gradeBar = GRADED.has(it.group) && maxG > 0 && avail.length > 1
+      ? `<div class="grades"><span>Grade Level</span>${[...Array(maxG + 1).keys()].map(n => avail.includes(n)
+          ? `<button class="${n <= g ? "on" : ""}" data-cardgrade="${n}" aria-label="Grade ${n}"></button>`
+          : `<button class="na" disabled aria-label="Grade ${n} not available"></button>`).join("")}<span class="gnum">${g}/${maxG}</span></div>`
+      : "";
+    card.style.setProperty("--c", `var(--st-${it.style || "Default"})`);
+    card.innerHTML =
+      `<div class="top"><div class="kind">${esc(kind)}</div><div class="title">${esc(it.name)}</div></div>` +
+      `<div class="art">${icon(it)}${det.volume ? `<span class="vol">${det.volume}V</span>` : ""}</div>` +
+      (det.desc ? `<div class="desc">${rich(det.desc)}</div>` : "") + body + gradeBar +
+      `<div class="keys">${hasRecipe ? `<button id="cardview">L.Alt</button> ${view === "recipe" ? "Show Stats" : "Show Recipe"}` : ""}</div>`;
+    card.hidden = false;
+  }
+
+  document.addEventListener("mouseover", e => {
+    const el = e.target.closest(".item");
+    if (el && el.dataset.id !== cur) show(el.dataset.id);
+  });
+  document.addEventListener("click", e => {
+    if (e.target.id === "cardview") { view = view === "recipe" ? "stats" : "recipe"; show(cur); }
+    const gb = e.target.closest("[data-cardgrade]");
+    if (gb) { cardGrade.set(cur, +gb.dataset.cardgrade); show(cur); }
+  });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Alt" && e.location === 1 && cur) { e.preventDefault(); view = view === "recipe" ? "stats" : "recipe"; show(cur); }
+  });
+})();
+</script>
+<script>
+// Story helper: show the step the game would accept right now (story + side) and finish exactly that one.
+(() => {
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const rows = { story: ["stepStory", "finStory"], side: ["stepSide", "finSide"] };
+  const msg = t => { const m = document.getElementById("livemsg"); if (m) { m.className = ""; m.textContent = t; } };
+  let busy = false;
+  async function refresh() {
+    if (busy) return; busy = true;
+    for (const [lbl, btn] of Object.values(rows)) { document.getElementById(lbl).textContent = "Checking…"; document.getElementById(btn).disabled = true; }
+    try {
+      const r = await fetch("/api/story"), j = await r.json();
+      if (!r.ok) throw new Error(j.error);
+      for (const [k, [lbl, btn]] of Object.entries(rows)) {
+        const s = j[k], b = document.getElementById(btn);
+        document.getElementById(lbl).innerHTML = s
+          ? `${esc(s.quest)} <small>›</small> ${s.section ? esc(s.section) + " <small>›</small> " : ""}<b style="font-weight:400;color:var(--gold-hi)">${esc(s.step)}</b>` +
+            (s.others ? ` <small>(+${s.others} more)</small>` : "")
+          : `<small>Nothing to finish right now</small>`;
+        b.dataset.node = s ? s.node : ""; b.disabled = !s;
+      }
+    } catch (e) {
+      for (const [lbl] of Object.values(rows)) document.getElementById(lbl).innerHTML = `<small>${esc(e.message || e)}</small>`;
+    }
+    busy = false;
+  }
+  for (const [lbl, btn] of Object.values(rows)) {
+    const b = document.getElementById(btn);
+    b.addEventListener("click", async () => {
+      if (!b.dataset.armed) {                                    // two clicks: story progress can't be undone here
+        b.dataset.armed = "1"; b.textContent = "Sure?";
+        setTimeout(() => { delete b.dataset.armed; b.textContent = "Finish step"; }, 4000);
+        return;
+      }
+      delete b.dataset.armed; b.textContent = "Finish step"; b.disabled = true;
+      try {
+        const r = await fetch("/api/live", { method: "POST", headers: { "Content-Type": "application/json" },
+                                              body: JSON.stringify({ cmd: "FinishStep", args: [b.dataset.node] }) });
+        const j = await r.json();
+        if (!r.ok) throw new Error(j.error);
+        msg("Step finished ✓");
+      } catch (e) { msg(String(e.message || e)); }
+      setTimeout(refresh, 1500);
+    });
+  }
+  document.getElementById("stepRefresh").addEventListener("click", refresh);
+  refresh();
+})();
+</script>
+<script>
+// Live · Building: instant build, staking time, stake extensions, per-category limit multipliers (dune_world.py).
+// Choices are remembered and re-applied by DuneShark after a game restart (they reset when Dune restarts).
+(() => {
+  const now = document.getElementById("bldNow"), auto = document.getElementById("bldAuto");
+  const LBL = { BuildingPiece: "Pieces", Light: "Lights", Decoration: "Decor", Storage: "Storage", Production: "Production", Doors: "Doors" };
+  const msg = (t, ok) => { const m = document.getElementById("livemsg"); if (m) { m.className = ok ? "ok" : "bad"; m.textContent = t; } };
+  function paint(s) {
+    const lim = Object.entries(s.limits).map(([k, v]) => `${LBL[k] || k} ${(+v).toLocaleString()}`).join(" · ");
+    now.innerHTML = `Now: instant ${s.instant ? "<b style='color:var(--ok)'>on</b>" : "off"} · staking ${s.staking_time}s · ${s.horizontal} extensions · build −${Math.round(s.depth_m)} m / +${Math.round(s.up_m)} m · max ${lim}`;
+    document.querySelectorAll('[data-bld="instant"]').forEach(b => b.classList.toggle("on", (b.dataset.val === "1") === s.instant));
+    if (s.saved && s.saved.auto === false) auto.checked = false;
+    // show the real values in the fields (never example numbers)
+    const field = k => document.querySelector(`form.bldform[data-bld="${k}"]`);
+    if (field("staking_time")) field("staking_time").elements.v.value = s.staking_time;
+    if (field("horizontal")) field("horizontal").elements.v.value = s.horizontal;
+    if (field("height")) field("height").elements.v.value = (s.saved && s.saved.height) || 1;
+    const mf = field("mult");
+    if (mf) { saved = (s.saved && s.saved.mult) || {}; mf.elements.v.value = saved[mf.elements.cat.value] || 1; }
+  }
+  let saved = {};
+  const mf0 = document.querySelector('form.bldform[data-bld="mult"]');
+  if (mf0) mf0.elements.cat.addEventListener("change", () => { mf0.elements.v.value = saved[mf0.elements.cat.value] || 1; });
+  async function call(body, label) {
+    try {
+      const r = await fetch("/api/building", body ? { method: "POST", headers: { "Content-Type": "application/json" },
+                                                      body: JSON.stringify(body) } : undefined);
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.error);
+      paint(j);
+      if (label) msg(label + " ✓", true);
+    } catch (e) { if (label) msg(String(e.message || e)); else now.textContent = "Load your world to see building values"; }
+  }
+  document.querySelectorAll('[data-bld="instant"]').forEach(b =>
+    b.addEventListener("click", () => call({ instant: b.dataset.val === "1", auto: auto.checked }, "Instant build " + (b.dataset.val === "1" ? "on" : "off"))));
+  document.querySelectorAll("form.bldform").forEach(f => f.addEventListener("submit", e => {
+    e.preventDefault();
+    const v = +f.elements.v.value, kind = f.dataset.bld;
+    if (kind === "mult") call({ mult: { [f.elements.cat.value]: v }, auto: auto.checked }, `${f.elements.cat.selectedOptions[0].text} limit ×${v}`);
+    else call({ [kind]: v, auto: auto.checked }, kind === "horizontal" ? `Stake extensions ${v}` : kind === "height" ? `Building height ×${v}` : `Staking time ${v}s`);
+  }));
+  auto.addEventListener("change", () => call({ auto: auto.checked }, auto.checked ? "Will re-apply after restarts" : "Won't re-apply after restarts"));
+  call();
+})();
+</script>
+<script>
+// Header status line: what DuneShark is waiting for, in plain words (refreshes every 3 s)
+(() => {
+  const box = document.getElementById("gstate"), txt = document.getElementById("gtext");
+  async function tick() {
+    try {
+      const s = await (await fetch("/api/state")).json();
+      box.className = "gstate " + s.state; txt.textContent = s.text; box.title = s.text;
+    } catch (e) { /* server restarting */ }
+  }
+  tick(); setInterval(tick, 3000);
+  document.getElementById("helpBtn").addEventListener("click", () => fetch("/api/doc/README.md"));
+})();
+</script>
+<script>
+// Instant ability cooldowns toggle
+(() => {
+  const b = document.getElementById("cdBtn");
+  const paint = s => { b.classList.toggle("on", s.on); b.setAttribute("aria-pressed", s.on); };
+  fetch("/api/cooldowns").then(r => r.json()).then(paint).catch(() => {});
+  b.addEventListener("click", async () => {
+    const r = await fetch("/api/cooldowns", { method: "POST", headers: { "Content-Type": "application/json" },
+                                              body: JSON.stringify({ on: b.getAttribute("aria-pressed") !== "true" }) });
+    const s = await r.json(); paint(s);
+    const m = document.getElementById("livemsg");
+    if (m) { m.className = "ok"; m.textContent = "Instant cooldowns " + (s.on ? "on ✓" : "off (normal cooldowns back)"); }
+  });
+})();
+</script>
+<script>
+// Profiles (profiles.json): save the whole setup, switch live
+(() => {
+  const box = document.getElementById("profButtons");
+  const msg = (t, ok) => { const m = document.getElementById("livemsg"); if (m) { m.className = ok ? "ok" : "bad"; m.textContent = t; } };
+  const post = body => fetch("/api/profiles", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  const paint = list => {
+    box.innerHTML = list.length ? list.map(p => `<button class="caps" data-prof="${p.key}" title="Load: ${p.key}">${p.name.replace(/</g, "&lt;")}</button>` +
+      `<button class="caps" data-profdel="${p.key}" title="Delete this profile" aria-label="Delete ${p.name.replace(/"/g, "")}">✕</button>`).join("")
+      : '<span class="field">No profiles yet. Set things up, then save them below.</span>';
+    box.querySelectorAll("[data-profdel]").forEach(b => b.addEventListener("click", async () => {
+      if (!b.dataset.armed) { b.dataset.armed = "1"; b.textContent = "Sure?"; setTimeout(() => { delete b.dataset.armed; b.textContent = "✕"; }, 3000); return; }
+      paint(await (await post({ delete: b.dataset.profdel })).json()); msg("Profile deleted", true);
+    }));
+    box.querySelectorAll("[data-prof]").forEach(b => b.addEventListener("click", async () => {
+      b.disabled = true;
+      try {
+        const r = await post({ key: b.dataset.prof }); const j = await r.json();
+        if (!r.ok) throw new Error(j.error);
+        msg(`Profile "${j.profile}" loaded ✓` + (j.notes.length ? " (" + j.notes.join("; ") + ")" : ""), !j.notes.length);
+        setTimeout(() => location.reload(), 900);          // repaint every panel with the new values
+      } catch (e) { msg(String(e.message || e)); b.disabled = false; }
+    }));
+  };
+  fetch("/api/profiles").then(r => r.json()).then(paint).catch(() => {});
+  document.getElementById("profSave").addEventListener("submit", async e => {
+    e.preventDefault();
+    const name = e.target.elements.n.value.trim();
+    try {
+      const r = await post({ save: name }); const j = await r.json();
+      if (!r.ok) throw new Error(j.error);
+      paint(j); e.target.elements.n.value = "";
+      msg(`Profile "${name}" saved ✓`, true);
+    } catch (err) { msg(String(err.message || err)); }
+  });
+})();
+</script>
+<script>
+// Item kits (kits.json): one button per kit
+(() => {
+  const box = document.getElementById("kitButtons");
+  const msg = (t, ok) => { const m = document.getElementById("livemsg"); if (m) { m.className = ok ? "ok" : "bad"; m.textContent = t; } };
+  const paint = list => {
+    box.innerHTML = list.map(k => `<button class="caps" data-kit="${k.key}" title="${k.count} items">${k.name.replace(/</g, "&lt;")}</button>` +
+      (k.custom ? `<button class="caps" data-kitdel="${k.key}" title="Delete this kit" aria-label="Delete ${k.name.replace(/"/g, "")}">✕</button>` : "")).join("");
+    box.querySelectorAll("[data-kitdel]").forEach(b => b.addEventListener("click", async () => {
+      if (!b.dataset.armed) { b.dataset.armed = "1"; b.textContent = "Sure?"; setTimeout(() => { delete b.dataset.armed; b.textContent = "✕"; }, 3000); return; }
+      const r = await fetch("/api/kits", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ delete: b.dataset.kitdel }) });
+      paint(await r.json()); msg("Kit deleted", true);
+    }));
+    box.querySelectorAll("[data-kit]").forEach(b => b.addEventListener("click", async () => {
+      b.disabled = true; msg("Spawning " + b.textContent + "…", true);
+      try {
+        const r = await fetch("/api/kits", { method: "POST", headers: { "Content-Type": "application/json" },
+                                             body: JSON.stringify({ key: b.dataset.kit }) });
+        const j = await r.json();
+        if (!r.ok) throw new Error(j.error);
+        msg(j.kit + " in your backpack ✓" + (j.failed && j.failed.length ? " (failed: " + j.failed.join("; ") + ")" : ""), !(j.failed && j.failed.length));
+      } catch (e) { msg(String(e.message || e)); }
+      b.disabled = false;
+    }));
+  };
+  fetch("/api/kits").then(r => r.json()).then(paint).catch(() => { box.innerHTML = '<span class="field">kits.json not readable</span>'; });
+  // "Save as kit": the Selected list (picked + grades from the main script) becomes a new kit button
+  document.getElementById("kitSave").addEventListener("submit", async e => {
+    e.preventDefault();
+    const name = e.target.elements.n.value.trim();
+    const items = [...picked].map(([id, qty]) => ({ id, qty, grade: grades.get(id) || 0 }));
+    try {
+      const r = await fetch("/api/kits", { method: "POST", headers: { "Content-Type": "application/json" },
+                                           body: JSON.stringify({ save: name, items }) });
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.error);
+      paint(j); e.target.elements.n.value = "";
+      msg(`Kit "${name}" saved (${items.length} items) ✓`, true);
+    } catch (err) { msg(String(err.message || err)); }
+  });
+})();
+</script>
+<script>
+// Fast travel: unlocked trading posts + own bases only (dune_travel.py)
+(() => {
+  const sel = document.getElementById("travelTo"), go = document.getElementById("travelGo");
+  const msg = (t, ok) => { const m = document.getElementById("livemsg"); if (m) { m.className = ok ? "ok" : "bad"; m.textContent = t; } };
+  async function load() {
+    try {
+      const r = await fetch("/api/travel"), list = await r.json();
+      if (!r.ok) throw new Error(list.error);
+      const groups = {};
+      list.forEach(d => (groups[d.kind] = groups[d.kind] || []).push(d));
+      sel.innerHTML = Object.entries(groups).map(([k, ds]) =>
+        `<optgroup label="${k}s">${ds.map(d => `<option value="${d.id}">${d.name.replace(/</g, "&lt;")}</option>`).join("")}</optgroup>`).join("")
+        || `<option value="">Nothing unlocked yet</option>`;
+    } catch (e) { sel.innerHTML = `<option value="">Load your world first</option>`; }
+  }
+  go.addEventListener("click", async () => {
+    if (!sel.value) return;
+    go.disabled = true; msg("Travelling to " + sel.selectedOptions[0].text + "…", true);
+    try {
+      const r = await fetch("/api/travel", { method: "POST", headers: { "Content-Type": "application/json" },
+                                             body: JSON.stringify({ id: sel.value }) });
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.error);
+      msg("Arrived at " + j.name + " ✓", true);
+    } catch (e) { msg(String(e.message || e)); }
+    go.disabled = false;
+  });
+  document.getElementById("travelRefresh").addEventListener("click", load);
+  load();
+})();
+</script>
+<script>
+// Run / suspensor speed multipliers (kept applied by DuneShark; remembered across restarts)
+(() => {
+  const forms = [...document.querySelectorAll("form.moveform")];
+  const paint = s => forms.forEach(f => { f.elements.v.value = s[f.dataset.move]; });
+  fetch("/api/move").then(r => r.json()).then(paint).catch(() => {});
+  forms.forEach(f => f.addEventListener("submit", async e => {
+    e.preventDefault();
+    const r = await fetch("/api/move", { method: "POST", headers: { "Content-Type": "application/json" },
+                                         body: JSON.stringify({ [f.dataset.move]: +f.elements.v.value }) });
+    const s = await r.json(); paint(s);
+    const m = document.getElementById("livemsg");
+    if (m) { m.className = "ok"; m.textContent = `${f.dataset.move === "run" ? "Run" : "Suspensor"} speed ×${s[f.dataset.move]} ✓`; }
+  }));
+})();
+</script>
+<script>
+// Ornithopter flight height / boost multipliers (applied to every loaded ornithopter, remembered across restarts)
+(() => {
+  const forms = [...document.querySelectorAll("form.vehform")];
+  const nb = document.getElementById("noBurn"), info = document.getElementById("thinAir");
+  const spd = [...document.querySelectorAll("form.spdform")];
+  const paint = s => {
+    forms.forEach(f => { f.elements.v.value = s[f.dataset.veh]; });
+    spd.forEach(f => { f.elements.v.value = s.speed[f.dataset.spd]; });
+    nb.classList.toggle("on", s.no_burn); nb.setAttribute("aria-pressed", s.no_burn);
+    // thin-air zone: stock 750-900 m, narrows with the multiplier (x2 = 1700 of 1800 m)
+    const hi = 900 * s.height, lo = s.no_burn ? hi : s.height > 1 ? hi - 150 * Math.pow(s.height, -0.585) : 750 * s.height;
+    info.textContent = s.no_burn ? `Ceiling ${Math.round(hi)} m · no thin-air burn or heat` : `Thin air from ${Math.round(lo)} m · ceiling ${Math.round(hi)} m`;
+  };
+  fetch("/api/vehicles").then(r => r.json()).then(paint).catch(() => {});
+  nb.addEventListener("click", async () => {
+    const r = await fetch("/api/vehicles", { method: "POST", headers: { "Content-Type": "application/json" },
+                                             body: JSON.stringify({ no_burn: nb.getAttribute("aria-pressed") !== "true" }) });
+    paint(await r.json());
+  });
+  spd.forEach(f => f.addEventListener("submit", async e => {
+    e.preventDefault();
+    const r = await fetch("/api/vehicles", { method: "POST", headers: { "Content-Type": "application/json" },
+                                             body: JSON.stringify({ speed: { [f.dataset.spd]: +f.elements.v.value } }) });
+    const s = await r.json(); paint(s);
+    const m = document.getElementById("livemsg");
+    const label = f.querySelector(".caps").textContent;
+    if (m) { m.className = "ok"; m.textContent = `${label} speed ×${s.speed[f.dataset.spd]} ✓ (applies within a few seconds)`; }
+  }));
+  forms.forEach(f => f.addEventListener("submit", async e => {
+    e.preventDefault();
+    const r = await fetch("/api/vehicles", { method: "POST", headers: { "Content-Type": "application/json" },
+                                             body: JSON.stringify({ [f.dataset.veh]: +f.elements.v.value }) });
+    const s = await r.json(); paint(s);
+    const m = document.getElementById("livemsg");
+    if (m) { m.className = "ok"; m.textContent = `Ornithopter ${f.dataset.veh} ×${s[f.dataset.veh]} ✓ (applies within a few seconds)`; }
+  }));
+})();
+</script>
+<script>
+// Infinite power / stamina / water: toggles (DuneShark keeps them at max; remembered across restarts)
+(() => {
+  const btns = [...document.querySelectorAll("[data-keep]")];
+  const paint = s => btns.forEach(b => { const on = !!s[b.dataset.keep]; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); });
+  fetch("/api/keep").then(r => r.json()).then(paint).catch(() => {});
+  btns.forEach(b => b.addEventListener("click", async () => {
+    const on = !b.classList.contains("on");
+    const r = await fetch("/api/keep", { method: "POST", headers: { "Content-Type": "application/json" },
+                                         body: JSON.stringify({ [b.dataset.keep]: on }) });
+    paint(await r.json());
+    const m = document.getElementById("livemsg");
+    if (m) { m.className = "ok"; m.textContent = `Infinite ${b.textContent.toLowerCase()} ${on ? "on" : "off"} ✓`; }
+  }));
+})();
+</script>
+<script>
+// Borderless window controls (only inside the DuneShark app window, where pywebview provides the api)
+window.addEventListener("pywebviewready", () => {
+  const api = window.pywebview.api;
+  document.getElementById("winbar").hidden = false;
+  document.body.classList.add("framed");
+  document.getElementById("wmin").onclick = () => api.minimize();
+  document.getElementById("wmax").onclick = () => api.toggle_maximize();
+  document.getElementById("wclose").onclick = () => api.close();
+  document.querySelector("#winbar .drag").ondblclick = () => api.toggle_maximize();
+  // resize corner: drag = new window size (screen coordinates, throttled to one call per frame)
+  // corner resizes both ways, right edge only width, bottom edge only height
+  for (const id of ["wgrip", "wedgeR", "wedgeB"]) {
+    const h = document.getElementById(id);
+    h.hidden = false;
+    const rx = +h.dataset.rx, ry = +h.dataset.ry;
+    h.addEventListener("mousedown", async e => {
+      e.preventDefault();
+      const [w0, h0] = await api.size(), x0 = e.screenX, y0 = e.screenY;
+      let pending = null;
+      const move = ev => {
+        if (pending) return;
+        pending = requestAnimationFrame(() => {
+          pending = null;
+          api.resize(w0 + rx * (ev.screenX - x0), h0 + ry * (ev.screenY - y0));
+        });
+      };
+      const up = () => { removeEventListener("mousemove", move); removeEventListener("mouseup", up); };
+      addEventListener("mousemove", move);
+      addEventListener("mouseup", up);
+    });
+  }
+});
+</script>
+<script>
+// UI size: -/+ buttons (1%), typed value, strict 50-110%, always starts at 100%. Ctrl +/- and Ctrl+0 too.
+(() => {
+  const MIN = 50, MAX = 110;
+  const num = document.getElementById("zoomnum");
+  let pct = 100;
+  let saveT = null;
+  const apply = (p, save = true) => {
+    pct = Math.max(MIN, Math.min(MAX, Math.round(+p) || 100));
+    document.body.style.zoom = pct / 100;
+    document.querySelector("aside").style.maxHeight = (10000 / pct) + "vh";   // sticky panel fits the window
+    num.value = pct;
+    if (save) {                                   // remembered in settings.json (survives restarts)
+      clearTimeout(saveT);
+      saveT = setTimeout(() => fetch("/api/settings", { method: "POST", headers: { "Content-Type": "application/json" },
+                                                         body: JSON.stringify({ zoom: pct }) }).catch(() => {}), 400);
+    }
+  };
+  fetch("/api/settings").then(r => r.json()).then(s => { if (s.zoom) apply(s.zoom, false); }).catch(() => {});
+  document.getElementById("zoomout").addEventListener("click", () => apply(pct - 1));
+  document.getElementById("zoomin").addEventListener("click", () => apply(pct + 1));
+  num.addEventListener("change", () => apply(num.value));
+  num.addEventListener("keydown", e => { if (e.key === "Enter") apply(num.value); });
+  document.getElementById("zoomreset").addEventListener("click", () => apply(100));
+  document.addEventListener("keydown", e => {
+    // the app window has no built-in reload shortcut: Ctrl+R / F5 reload the page
+    if (e.key === "F5" || (e.ctrlKey && e.key.toLowerCase() === "r")) { e.preventDefault(); location.reload(); return; }
+    if (!e.ctrlKey) return;
+    if (e.key === "+" || e.key === "=") { e.preventDefault(); apply(pct + 1); }
+    else if (e.key === "-") { e.preventDefault(); apply(pct - 1); }
+    else if (e.key === "0") { e.preventDefault(); apply(100); }
+  });
+  apply(pct, false);                               // start at 100 until the saved size arrives
+})();
+</script>
+</body>
+</html>
