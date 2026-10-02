@@ -26,6 +26,9 @@ it safely can; if something changed that it can't adapt to, it tells you and cha
 
 To remove DuneShark, just delete the folder. Nothing is installed anywhere else.
 
+**DuneShark.exe shows an error about `Python.Runtime.dll`?** Windows blocked the downloaded files. Close it,
+right-click the **zip** → **Properties** → tick **Unblock** → OK, then unzip again.
+
 ### The status line (top of the window)
 
 | Dot | Message | Meaning |
@@ -36,6 +39,31 @@ To remove DuneShark, just delete the folder. Nothing is installed anywhere else.
 | 🔴 | Game version not supported / online server / BattlEye running / Windows blocked access | See the message; nothing is changed |
 
 The **Help** button opens this file.
+
+---
+
+## Instalación (en español)
+
+0. **Solo una vez:** en Steam, haz clic derecho en **Dune: Awakening → Propiedades → Opciones de lanzamiento** y escribe `-nobattleye`.
+   BattlEye (el anticheat en línea) no hace falta para jugar solo, y DuneShark no puede conectarse mientras está activo.
+   Quítalo de nuevo antes de jugar en línea.
+1. **Descomprime** la carpeta `DuneShark` en un lugar normal, como el Escritorio o Documentos.
+   No dentro de *Archivos de programa* (DuneShark guarda tu configuración junto a sí mismo).
+2. Haz doble clic en **DuneShark.exe**.
+3. **¿Aparece "Windows protegió tu PC"?** Es el aviso de Windows para aplicaciones nuevas que aún no son muy conocidas.
+   Haz clic en **Más información → Ejecutar de todas formas**. Algunos antivirus también marcan los trainers de juegos;
+   es normal en herramientas que modifican la memoria del juego.
+4. Inicia **Dune: Awakening** y carga tu mundo **en solitario** (DuneShark puede abrirse antes o después del juego).
+
+**¿No ves DuneShark?** Probablemente está detrás del juego en pantalla completa. Presiona **Ctrl+Alt+Inicio (Home)**
+para traerlo al frente, y otra vez para ocultarlo.
+
+Para desinstalar DuneShark, simplemente borra la carpeta. No se instala nada en ningún otro lugar.
+
+**¿DuneShark.exe muestra un error sobre `Python.Runtime.dll`?** Windows bloqueó los archivos descargados. Ciérralo,
+haz clic derecho en el **zip** → **Propiedades** → marca **Desbloquear** → Aceptar, y descomprímelo de nuevo.
+
+> **Solo mundos en solitario.** Usar cualquier herramienta de memoria en servidores oficiales puede hacer que baneen tu cuenta.
 
 ---
 
@@ -102,6 +130,7 @@ Your settings are remembered and re-applied automatically after restarts of Dune
 | Ctrl+Alt+PageUp / PageDown | Suspensor speed +0.5 / −0.5 |
 | Ctrl+Alt+S / X | Finish story step / side step (press twice) |
 | Ctrl+Alt+1 / 2 | Build Ready Kit / Basic Survival Kit |
+| Ctrl+Alt+M | Get 100,000 Solaris |
 
 Change any of them in `hotkeys.json` (in the DuneShark folder). You can also bind a profile: `"Ctrl+Alt+F1": "profile:combat"`.
 Controller users: see `REWASD_GUIDE.md`.

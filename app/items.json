@@ -47708,7 +47708,7 @@
 {
 "id": "MiningTool_2h_Unique_01",
 "name": "Callie's Breaker",
-"group": "Weapons",
+"group": "Equipment",
 "tier": 3,
 "rarity": "Rare",
 "faction": null,
@@ -47932,7 +47932,7 @@
 {
 "id": "MiningTool_1h_Heavy",
 "name": "Cutteray Mk1",
-"group": "Weapons",
+"group": "Equipment",
 "tier": 1,
 "rarity": null,
 "faction": "Fremen",
@@ -47946,7 +47946,7 @@
 {
 "id": "MiningTool_1h_Light",
 "name": "Cutteray Mk2",
-"group": "Weapons",
+"group": "Equipment",
 "tier": 2,
 "rarity": null,
 "faction": "Fremen",
@@ -47960,7 +47960,7 @@
 {
 "id": "MiningTool_2h_Standard",
 "name": "Cutteray Mk3",
-"group": "Weapons",
+"group": "Equipment",
 "tier": 3,
 "rarity": null,
 "faction": "Fremen",
@@ -47974,7 +47974,7 @@
 {
 "id": "D_MiningTool_1h_Advanced",
 "name": "Cutteray Mk3",
-"group": "Weapons",
+"group": "Equipment",
 "tier": null,
 "rarity": null,
 "faction": null,
@@ -47988,7 +47988,7 @@
 {
 "id": "MiningTool_2h_Heavy",
 "name": "Cutteray Mk4",
-"group": "Weapons",
+"group": "Equipment",
 "tier": 4,
 "rarity": null,
 "faction": "Fremen",
@@ -48002,7 +48002,7 @@
 {
 "id": "MiningTool_2h_Light",
 "name": "Cutteray Mk5",
-"group": "Weapons",
+"group": "Equipment",
 "tier": 5,
 "rarity": null,
 "faction": "Fremen",
@@ -48016,7 +48016,7 @@
 {
 "id": "MiningTool_2h_Advanced",
 "name": "Cutteray Mk6",
-"group": "Weapons",
+"group": "Equipment",
 "tier": 6,
 "rarity": null,
 "faction": "Fremen",
@@ -48884,7 +48884,7 @@
 {
 "id": "MiningTool_1h_Standard",
 "name": "Improvised Cutteray",
-"group": "Weapons",
+"group": "Equipment",
 "tier": 0,
 "rarity": null,
 "faction": null,
@@ -49108,7 +49108,7 @@
 {
 "id": "MiningTool_2h_Unique_04",
 "name": "Kynes's Cutteray",
-"group": "Weapons",
+"group": "Equipment",
 "tier": 6,
 "rarity": "Rare",
 "faction": null,
@@ -49430,7 +49430,7 @@
 {
 "id": "MiningTool_1h_Unique_02",
 "name": "Olef's Quickcutter",
-"group": "Weapons",
+"group": "Equipment",
 "tier": 2,
 "rarity": "Rare",
 "faction": null,
@@ -50032,7 +50032,7 @@
 {
 "id": "MiningTool_2h_Unique_02",
 "name": "Sandflies Carver",
-"group": "Weapons",
+"group": "Equipment",
 "tier": 4,
 "rarity": "Rare",
 "faction": null,
@@ -50368,7 +50368,7 @@
 {
 "id": "MiningTool_1h_Unique_01",
 "name": "Sim's Cutter",
-"group": "Weapons",
+"group": "Equipment",
 "tier": 1,
 "rarity": "Rare",
 "faction": null,
@@ -50774,7 +50774,7 @@
 {
 "id": "MiningTool_2h_Unique_03",
 "name": "Tarl Cutteray",
-"group": "Weapons",
+"group": "Equipment",
 "tier": 5,
 "rarity": "Rare",
 "faction": null,
@@ -51222,7 +51222,7 @@
 {
 "id": "D_MiningTool_1h_Basic",
 "name": "XX_NOTUSED_Basic Cutterray",
-"group": "Weapons",
+"group": "Equipment",
 "tier": null,
 "rarity": null,
 "faction": null,

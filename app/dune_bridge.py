@@ -518,6 +518,10 @@ def run_command(g, name, args, ext=None):
             buf[at] = 1 if v in ("true", "on", "yes") else 0 if v in ("false", "off", "no") else int(val) & 0xFF
         elif t in ("IntProperty", "EnumProperty"):
             struct.pack_into("<i", buf, at, int(val))
+        elif t == "Int16Property":
+            struct.pack_into("<h", buf, at, max(-32768, min(32767, int(val))))
+        elif t == "UInt16Property":
+            struct.pack_into("<H", buf, at, max(0, min(65535, int(val))))
         elif t == "UInt32Property":
             struct.pack_into("<I", buf, at, int(val))
         elif t == "Int64Property":

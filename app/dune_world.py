@@ -13,7 +13,7 @@ import dune_bridge as b
 WORLD = {  # key -> (property on UserServerCustomSettings, kind)   (CT table, read from the enum)
     2: ("GatheringAmount", "f"), 3: ("CraftingCost", "f"), 5: ("CraftingTimeMultiplier", "f"),
     7: ("BuildingCostMultiplier", "f"), 9: ("FuelBurnTimeMultiplier", "f"), 10: ("InventoryVolumeMultiplier", "f"),
-    19: ("GlobalXpMultiplier", "f"), 20: ("CombatXp", "f"), 21: ("GatheringXp", "f"), 22: ("MissionXp", "f"),
+    19: ("GlobalXpMultiplier", "f"), 26: ("IntelPointsGainMultiplier", "f"), 20: ("CombatXp", "f"), 21: ("GatheringXp", "f"), 22: ("MissionXp", "f"),
     25: ("PlayerStaminaDrain", "f"), 29: ("HeatBuildupRate", "f"), 31: ("ThirstMultiplier", "f"),
     44: ("BuildingPieceLimitMultiplier", "f"), 45: ("bBuildingInfiniteStability", "b"),
 }

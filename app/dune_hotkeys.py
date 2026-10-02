@@ -29,6 +29,7 @@ DEFAULTS = {
     "Ctrl+Alt+2": "kit:survival",
     "Ctrl+Alt+Home": "show_duneshark",
     "Ctrl+Alt+C": "instant_cooldowns",
+    "Ctrl+Alt+M": "solaris:100000",
 }
 ACTIONS_HELP = {
     "instant_build": "Instant build on/off", "infinite_power": "Infinite power on/off",
@@ -39,6 +40,7 @@ ACTIONS_HELP = {
     "kit:<name>": "Spawn a kit from kits.json (e.g. kit:build, kit:survival)",
     "show_duneshark": "Show DuneShark on top of the game / hide it again",
     "instant_cooldowns": "Instant ability cooldowns on/off",
+    "solaris:<amount>": "Grant Solaris, e.g. solaris:100000",
     "profile:<key>": "Switch to a saved profile (profiles.json), e.g. profile:combat",
 }
 
@@ -206,6 +208,10 @@ class Actions:
                 t.show("DuneShark window not found", False)
             elif not shown:
                 t.show("DuneShark hidden - back to Arrakis")
+        elif name.startswith("solaris:"):
+            amount = max(1, min(int(name[8:]), 100000000))
+            s.live("AddSolarisToAccount", [str(amount)])
+            t.show("+%s Solaris" % format(amount, ","))
         elif name.startswith("kit:"):
             r = s.kit_spawn(name[4:])
             t.show(r["kit"] + " in your backpack", not r.get("failed"))

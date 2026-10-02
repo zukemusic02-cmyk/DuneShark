@@ -5,7 +5,25 @@ resize grip, and the header works as a drag area (class "pywebview-drag-region")
 Window position and size are remembered in settings.json (same file as the UI size).
 """
 import ctypes
+import os
+import sys
 import threading
+
+
+def unblock_own_files():
+    """A downloaded zip marks every file as "from the internet" (Zone.Identifier stream), and .NET then refuses
+    to load pythonnet's Python.Runtime.dll, so the window never opens. Remove the mark from our own folder."""
+    if not getattr(sys, "frozen", False):
+        return
+    for base, _, files in os.walk(os.path.dirname(sys.executable)):
+        for f in files:
+            try:
+                os.remove(os.path.join(base, f) + ":Zone.Identifier")
+            except OSError:
+                pass
+
+
+unblock_own_files()
 import webview
 from http.server import ThreadingHTTPServer
 import server

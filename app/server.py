@@ -245,6 +245,17 @@ def live(cmd, args):
         if _live_game is None or dune_bridge.find_pid() != _live_game.pid:
             _live_game = dune_bridge.Game()
             _live_game.attach()
+        if cmd in ("SetCrateLoot", "SetEnemyLoot"):   # loot roll multipliers (dune_loot.py, runtime only)
+            import dune_loot
+            out = dune_loot.set_multiplier(_live_game, "crate" if cmd == "SetCrateLoot" else "enemy", args[0])
+            return {"ok": True, "cmd": cmd, **out}
+        if cmd == "SetIntelMultiplier":         # world setting IntelPointsGainMultiplier (0..5, whole steps)
+            import dune_world
+            v = float(args[0])
+            if v not in (0, 1, 2, 3, 4, 5):
+                raise ValueError("Intel gain multiplier: 0 to 5 in steps of 1.")
+            now = dune_world.set_world(_live_game, _live_game.ctx(), 26, v)
+            return {"ok": True, "cmd": cmd, "value": now}
         if cmd == "FinishStep":                 # story helper: finish exactly this quest step (checked again first)
             import dune_story
             dune_story.finish(_live_game, _live_game.ctx(), str(args[0]))

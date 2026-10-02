@@ -14,3 +14,4 @@ release/_build/
 release/_dist/
 release/DuneShark/
 release/*.zip
+nexus_api_key.txt

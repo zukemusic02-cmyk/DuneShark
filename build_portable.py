@@ -16,7 +16,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 APP = os.path.join(ROOT, "app")
 REL = os.path.join(ROOT, "release")
 DIST = os.path.join(REL, "DuneShark")
-VERSION = "0.2.0"
+VERSION = "0.2.2"
 
 DATA = ["index.html", "duneshark.ico", "duneshark.png", "items.json", "item_details.json", "augment_stats.json",
         "item_stats.json", "game_colors.json", "icon_lum.json", "journey_names.json"]
